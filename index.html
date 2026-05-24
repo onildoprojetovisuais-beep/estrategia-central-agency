@@ -391,6 +391,58 @@ tr:hover td { background: var(--surface-hover); }
   opacity: 0.4;
 }
 
+/* ─── SWOT ACCORDION ─── */
+.swot-item {
+  border-radius: 6px;
+  border-left: 3px solid currentColor;
+  cursor: pointer;
+  transition: background var(--transition);
+  overflow: hidden;
+}
+.swot-item:hover { filter: brightness(1.08); }
+.swot-item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  user-select: none;
+}
+.swot-item-code {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+.swot-item-title {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.4;
+  flex: 1;
+}
+.swot-chevron {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+  transition: transform 280ms ease;
+  display: inline-block;
+}
+.swot-item.open .swot-chevron { transform: rotate(180deg); }
+.swot-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 320ms cubic-bezier(0.4,0,0.2,1);
+}
+.swot-item.open .swot-item-body { max-height: 200px; }
+.swot-body-inner {
+  padding: 0 12px 12px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.swot-body-row { font-size: 12px; line-height: 1.55; color: var(--text-secondary); }
+.swot-body-row strong { color: var(--text-primary); font-weight: 600; }
+
 /* ─── SEARCH HIGHLIGHT ─── */
 mark.search-hl {
   background: rgba(245,230,66,0.25);
@@ -1312,177 +1364,180 @@ mark.search-hl {
   </div>
   <div class="exec-decision"><span class="exec-tag">Prioridade</span><span class="exec-text">Explorar F3 + O3 imediatamente: método nomeado + janela de primeiro-entrante = posição monopolista antes que apareça concorrência.</span></div>
   <div class="grid-2">
+    <!-- ── FORÇAS ── -->
     <div class="card" style="border-color:rgba(81,207,102,0.3);background:rgba(81,207,102,0.03);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:10px;height:10px;background:var(--green);border-radius:50%;"></span><h3 class="card-title" style="margin:0;color:var(--green);">Forças</h3><span class="badge badge-green" style="margin-left:auto;">Interno · Positivo</span></div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="padding:10px 12px;background:rgba(81,207,102,0.06);border-radius:6px;border-left:3px solid var(--green);"><div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:3px;">F1</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Especialização exclusiva em pediatria — 47.787 pediatras no Brasil, +89,6% em 10 anos</div></div>
-        <div style="padding:10px 12px;background:rgba(81,207,102,0.06);border-radius:6px;border-left:3px solid var(--green);"><div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:3px;">F2</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Método proprietário nomeado "Pediatra em Escala"</div></div>
-        <div style="padding:10px 12px;background:rgba(81,207,102,0.06);border-radius:6px;border-left:3px solid var(--green);"><div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:3px;">F3</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Escada de valor com ascensão mecânica — LTV R$124k</div></div>
-        <div style="padding:10px 12px;background:rgba(81,207,102,0.06);border-radius:6px;border-left:3px solid var(--green);"><div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:3px;">F4</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Fundadores com autoridade dual: criativo (NIL) + estrategista (JAQUE)</div></div>
-        <div style="padding:10px 12px;background:rgba(81,207,102,0.06);border-radius:6px;border-left:3px solid var(--green);"><div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:3px;">F5</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Posicionamento de categoria própria — primeiro no segmento</div></div>
-        <div style="padding:10px 12px;background:rgba(81,207,102,0.06);border-radius:6px;border-left:3px solid var(--green);"><div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:3px;">F6</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Modelo produtizado 80% template + 20% personalização</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+
+        <div class="swot-item" style="background:rgba(81,207,102,0.06);color:var(--green);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">F1</span><span class="swot-item-title">Especialização exclusiva em pediatria — 47.787 pediatras no Brasil, +89,6% em 10 anos</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Mercado-alvo com quase 48 mil potenciais clientes em crescimento estrutural. Especialização vertical é barreira que agências genéricas não conseguem cruzar.</div><div class="swot-body-row"><strong>Exemplo:</strong> Pediatra em Ribeirão Preto que busca agência encontra só opções genéricas — a Agency é a única com calendário sazonal pediátrico pronto e scripts validados para mãe 28–42 anos.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(81,207,102,0.06);color:var(--green);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">F2</span><span class="swot-item-title">Método proprietário nomeado "Pediatra em Escala"</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Nome próprio transforma serviço em produto. Torna a venda tangível, o processo previsível e dificulta a comparação direta com concorrentes.</div><div class="swot-body-row"><strong>Exemplo:</strong> Na reunião comercial, quando o pediatra pergunta "como vocês trabalham?", a resposta é um método nomeado com 3 níveis claros — não uma lista de tarefas genéricas.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(81,207,102,0.06);color:var(--green);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">F3</span><span class="swot-item-title">Escada de valor com ascensão mecânica — LTV R$124k</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> A escada N1→N2→N3 garante upgrade por gatilho operacional (resultado comprovado), não por argumento de venda — aumenta LTV e reduz churn por expectativa frustrada.</div><div class="swot-body-row"><strong>Exemplo:</strong> Cliente N1 com agenda cheia e secretária perdendo leads — esse é o gatilho natural para N2 (CRM). O upgrade não precisa ser vendido, ele se justifica sozinho.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(81,207,102,0.06);color:var(--green);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">F4</span><span class="swot-item-title">Fundadores com autoridade dual: criativo (NIL) + estrategista (JAQUE)</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Duas vozes complementares geram conteúdo de maior alcance — NIL atrai pela disrupção, JAQUE converte pela análise. Juntos formam um funil de autoridade completo.</div><div class="swot-body-row"><strong>Exemplo:</strong> NIL posta "o erro que pediatras cometem no Instagram" → JAQUE aprofunda "como estruturar presença digital do consultório" → Agency fecha com diagnóstico pago.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(81,207,102,0.06);color:var(--green);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">F5</span><span class="swot-item-title">Posicionamento de categoria própria — primeiro no segmento</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Ser primeiro em uma categoria especializada é vantagem que demora anos para ser copiada. O mercado associa o método à Agency — não à concorrência.</div><div class="swot-body-row"><strong>Exemplo:</strong> Quando um concorrente tentar entrar em "marketing pediátrico", a Agency já terá cases, comunidade e método documentado. A segunda posição vale muito menos.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(81,207,102,0.06);color:var(--green);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">F6</span><span class="swot-item-title">Modelo produtizado 80% template + 20% personalização</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Produtização permite escalar sem perder qualidade. Reduz tempo de produção, garante consistência e protege a margem operacional.</div><div class="swot-body-row"><strong>Exemplo:</strong> O calendário editorial de janeiro (febre, gripe, volta às aulas) é 80% igual para todos os clientes — apenas voz e visual são personalizados. Cliente 6 custa quase o mesmo que cliente 2.</div></div></div>
+        </div>
+
       </div>
     </div>
+
+    <!-- ── FRAQUEZAS ── -->
     <div class="card" style="border-color:rgba(255,107,107,0.3);background:rgba(255,107,107,0.03);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:10px;height:10px;background:var(--red);border-radius:50%;"></span><h3 class="card-title" style="margin:0;color:var(--red);">Fraquezas</h3><span class="badge badge-red" style="margin-left:auto;">Interno · Negativo</span></div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="padding:10px 12px;background:rgba(255,107,107,0.06);border-radius:6px;border-left:3px solid var(--red);"><div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:3px;">Fr1</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Dependência operacional dos fundadores na operação inicial</div></div>
-        <div style="padding:10px 12px;background:rgba(255,107,107,0.06);border-radius:6px;border-left:3px solid var(--red);"><div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:3px;">Fr2</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Ausência de cases documentados na fundação</div></div>
-        <div style="padding:10px 12px;background:rgba(255,107,107,0.06);border-radius:6px;border-left:3px solid var(--red);"><div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:3px;">Fr3</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Concentração geográfica em Mococa/região</div></div>
-        <div style="padding:10px 12px;background:rgba(255,107,107,0.06);border-radius:6px;border-left:3px solid var(--red);"><div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:3px;">Fr4</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Banco de ativos ainda em construção</div></div>
-        <div style="padding:10px 12px;background:rgba(255,107,107,0.06);border-radius:6px;border-left:3px solid var(--red);"><div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:3px;">Fr5</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Risco de ancoragem de preço com oferta de batina</div></div>
-        <div style="padding:10px 12px;background:rgba(255,107,107,0.06);border-radius:6px;border-left:3px solid var(--red);"><div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:3px;">Fr6</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Operação inicial centralizada nos fundadores</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+
+        <div class="swot-item" style="background:rgba(255,107,107,0.06);color:var(--red);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">Fr1</span><span class="swot-item-title">Dependência operacional dos fundadores na operação inicial</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Com NIL e JAQUE em todas as entregas, o crescimento tem teto. A partir do cliente 4, a qualidade cai ou os fundadores param de vender.</div><div class="swot-body-row"><strong>Exemplo:</strong> Se NIL está com gripe, os clientes 1 e 2 ficam sem entrega de conteúdo. O contrato está em risco por dependência de pessoa, não de processo.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(255,107,107,0.06);color:var(--red);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">Fr2</span><span class="swot-item-title">Ausência de cases documentados na fundação</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> No marketing médico, o case é o argumento de venda mais poderoso. Sem casos reais, a venda depende 100% da autoridade pessoal dos fundadores.</div><div class="swot-body-row"><strong>Exemplo:</strong> Pediatra cético na reunião: "vocês já fizeram isso para alguém?" — sem case documentado com números, a resposta enfraquece a proposta e alonga o ciclo de venda.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(255,107,107,0.06);color:var(--red);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">Fr3</span><span class="swot-item-title">Concentração geográfica em Mococa/região</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> A rede local tem limite de ~50 pediatras na região. Depois de fechar os primeiros 3–4 clientes locais, o crescimento trava se não houver canais digitais ativos.</div><div class="swot-body-row"><strong>Exemplo:</strong> Mococa tem ~8–12 pediatras com perfil ICP. Isso resolve o mês 1. A partir do mês 2, a operação precisa funcionar à distância para escalar.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(255,107,107,0.06);color:var(--red);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">Fr4</span><span class="swot-item-title">Banco de ativos ainda em construção</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Sem templates prontos de criativos pediátricos, cada cliente novo exige produção do zero — aumenta tempo de onboarding e eleva risco de entrega com baixa qualidade.</div><div class="swot-body-row"><strong>Exemplo:</strong> Cliente onboardado em dia 1 precisa de posts em dia 15. Sem banco de ativos, a equipe produz sob pressão e o resultado é inconsistente nos primeiros ciclos.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(255,107,107,0.06);color:var(--red);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">Fr5</span><span class="swot-item-title">Risco de ancoragem de preço com oferta de entrada</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Se o diagnóstico pago (R$500) for percebido como o produto principal, o upgrade para N1 (R$2.500/mês) pode gerar resistência por contraste de preço.</div><div class="swot-body-row"><strong>Exemplo:</strong> Pediatra paga R$500 pelo laudo e espera que o plano mensal seja "um pouco mais". O framing correto: o diagnóstico é a primeira etapa, não o produto.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(255,107,107,0.06);color:var(--red);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">Fr6</span><span class="swot-item-title">Operação inicial centralizada nos fundadores</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Fundadores como operadores são gargalo de crescimento e de comercial. Cada hora na produção é uma hora a menos em vendas e estratégia.</div><div class="swot-body-row"><strong>Exemplo:</strong> NIL produzindo conteúdo para 4 clientes simultaneamente = impossível manter qualidade + fazer reuniões comerciais + construir o banco de ativos ao mesmo tempo.</div></div></div>
+        </div>
+
       </div>
     </div>
+
+    <!-- ── OPORTUNIDADES ── -->
     <div class="card" style="border-color:rgba(78,205,196,0.3);background:rgba(78,205,196,0.03);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:10px;height:10px;background:var(--teal);border-radius:50%;"></span><h3 class="card-title" style="margin:0;color:var(--teal);">Oportunidades</h3><span class="badge badge-teal" style="margin-left:auto;">Externo · Positivo</span></div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O1</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Mercado pediátrico particular em crescimento estrutural</div></div>
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O2</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Digitalização da saúde acelerada pós-pandemia</div></div>
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O3</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Janela de primeiro-entrante — sem concorrência especializada</div></div>
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O4</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Expansão geográfica via operação 100% digital</div></div>
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O5</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Subnichos pediátricos (alergologia, neuropediatria, gastropediatria)</div></div>
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O6</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Produto N0 de diagnóstico pago (R$500–1.000)</div></div>
-        <div style="padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border-left:3px solid var(--teal);"><div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:3px;">O7</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Comunidade de clientes como ativo de retenção e indicação</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O1</span><span class="swot-item-title">Mercado pediátrico particular em crescimento estrutural</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Com a crise dos planos de saúde, mais famílias buscam pediatras particulares. Isso aumenta a urgência do pediatra em ter agenda particular cheia.</div><div class="swot-body-row"><strong>Exemplo:</strong> Pediatra que antes lotava via convênio agora tem 40% da agenda vazia depois de credenciamentos cancelados — a dor é real e imediata.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O2</span><span class="swot-item-title">Digitalização da saúde acelerada pós-pandemia</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> A pandemia normalizou a busca online por médicos. Pediatras que vinham exclusivamente por indicação agora precisam de presença digital para ser encontrados.</div><div class="swot-body-row"><strong>Exemplo:</strong> Mãe de primeira viagem pesquisa "pediatra particular Ribeirão Preto" no Google antes de pedir indicação — quem não aparece não existe.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O3</span><span class="swot-item-title">Janela de primeiro-entrante — sem concorrência especializada</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Não existe hoje no Brasil nenhuma agência com método proprietário exclusivo para pediatria. Quem define o padrão primeiro define a categoria.</div><div class="swot-body-row"><strong>Exemplo:</strong> "Método Pediatra em Escala" pode ser para o marketing pediátrico o que a RD Station foi para o inbound no Brasil — quem chega segundo compete com o padrão que o primeiro criou.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O4</span><span class="swot-item-title">Expansão geográfica via operação 100% digital</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> A operação não depende de presença física. Com SOPs documentados, é possível atender pediatras em qualquer cidade do Brasil sem estrutura local.</div><div class="swot-body-row"><strong>Exemplo:</strong> Pediatra em Manaus: DM no Instagram → reunião por videochamada → contrato assinado digitalmente → onboarding remoto → entregas via plataforma. Zero visita presencial.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O5</span><span class="swot-item-title">Subnichos pediátricos (alergologia, neuropediatria, gastropediatria)</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Cada subespecialidade tem sazonalidade, público e dores próprias. Criativos especializados geram resultados superiores e aprofundam o diferencial da Agency.</div><div class="swot-body-row"><strong>Exemplo:</strong> Neuropediatra tem pico de consultas no início do ano escolar — um calendário editorial que captura esse timing traz resultado que agência genérica não alcança.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O6</span><span class="swot-item-title">Produto N0 de diagnóstico pago (R$500–1.000)</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Um diagnóstico pago qualifica melhor o lead do que uma reunião gratuita. Quem paga para ser diagnosticado está comprometido — a barreira de entrada cria seleção natural.</div><div class="swot-body-row"><strong>Exemplo:</strong> "Laudo de Saúde Digital da Clínica Pediátrica" — R$500, reembolsável no contrato N1. Cria comprometimento antes da proposta e gera receita imediata enquanto a carteira cresce.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(78,205,196,0.06);color:var(--teal);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">O7</span><span class="swot-item-title">Comunidade de clientes como ativo de retenção e indicação</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Uma comunidade de pediatras clientes gera indicação entre pares — canal de aquisição de menor custo e maior taxa de conversão.</div><div class="swot-body-row"><strong>Exemplo:</strong> Grupo privado "Rede Pediatria Particular" — clientes trocam resultados e estratégias. Pediatra de fora quer entrar. A comunidade vira o melhor argumento de venda.</div></div></div>
+        </div>
+
       </div>
     </div>
+
+    <!-- ── AMEAÇAS ── -->
     <div class="card" style="border-color:rgba(245,230,66,0.3);background:rgba(245,230,66,0.02);">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:10px;height:10px;background:var(--yellow);border-radius:50%;"></span><h3 class="card-title" style="margin:0;color:var(--yellow);">Ameaças</h3><span class="badge badge-yellow" style="margin-left:auto;">Externo · Negativo</span></div>
-      <div style="display:flex;flex-direction:column;gap:8px;">
-        <div style="padding:10px 12px;background:rgba(245,230,66,0.05);border-radius:6px;border-left:3px solid var(--yellow);"><div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:3px;">A1</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Regulamentação CFM nº 2.336/2023 — compliance contínuo</div></div>
-        <div style="padding:10px 12px;background:rgba(245,230,66,0.05);border-radius:6px;border-left:3px solid var(--yellow);"><div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:3px;">A2</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Comoditização do método por imitadores</div></div>
-        <div style="padding:10px 12px;background:rgba(245,230,66,0.05);border-radius:6px;border-left:3px solid var(--yellow);"><div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:3px;">A3</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Recessão econômica e corte de orçamento de marketing</div></div>
-        <div style="padding:10px 12px;background:rgba(245,230,66,0.05);border-radius:6px;border-left:3px solid var(--yellow);"><div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:3px;">A4</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Mudanças de algoritmo nas plataformas Meta/Google</div></div>
-        <div style="padding:10px 12px;background:rgba(245,230,66,0.05);border-radius:6px;border-left:3px solid var(--yellow);"><div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:3px;">A5</div><div style="font-size:13px;color:var(--text-primary);line-height:1.4;">Churn por desalinhamento de expectativa no onboarding</div></div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+
+        <div class="swot-item" style="background:rgba(245,230,66,0.05);color:var(--yellow);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">A1</span><span class="swot-item-title">Regulamentação CFM nº 2.336/2023 — compliance contínuo</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> O CFM proíbe promessas de resultado, antes/depois e comparações em publicidade médica. Violação implica processo ético para o médico — não para a agência.</div><div class="swot-body-row"><strong>Exemplo:</strong> Anúncio com "garanta mais consultas particulares" pode ser enquadrado pelo CFM. Todos os criativos precisam ser revisados sob esse filtro antes de publicar.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(245,230,66,0.05);color:var(--yellow);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">A2</span><span class="swot-item-title">Comoditização do método por imitadores</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Uma vez visível no mercado, qualquer agência pode criar um "Método Pediátrico" similar. O nome não tem proteção — os cases e a comunidade têm.</div><div class="swot-body-row"><strong>Exemplo:</strong> Agência de Curitiba pode lançar "Método Pediátrico de Crescimento" em 6 meses. A proteção real é ter 10+ cases documentados e uma comunidade ativa antes disso acontecer.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(245,230,66,0.05);color:var(--yellow);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">A3</span><span class="swot-item-title">Recessão econômica e corte de orçamento de marketing</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Em crises econômicas, marketing é o primeiro gasto cortado por médicos. Pediatras com faturamento em queda cancelam contratos percebidos como não essenciais.</div><div class="swot-body-row"><strong>Exemplo:</strong> A proteção é posicionar o marketing como gerador de receita — "você paga R$2.500 e gera R$8.000 em consultas novas". Quando o ROI é claro, o corte é mais difícil.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(245,230,66,0.05);color:var(--yellow);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">A4</span><span class="swot-item-title">Mudanças de algoritmo nas plataformas Meta/Google</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> Dependência de algoritmos cria volatilidade de resultado. Uma mudança pode reduzir alcance orgânico em 50% e gerar insatisfação sem que a Agency tenha falhado.</div><div class="swot-body-row"><strong>Exemplo:</strong> Em 2023, o Instagram priorizou Reels — agências que só faziam posts estáticos perderam alcance. A proteção: diversificar formatos e jamais depender de um só canal.</div></div></div>
+        </div>
+
+        <div class="swot-item" style="background:rgba(245,230,66,0.05);color:var(--yellow);" onclick="toggleSwot(this)">
+          <div class="swot-item-header"><span class="swot-item-code">A5</span><span class="swot-item-title">Churn por desalinhamento de expectativa no onboarding</span><span class="swot-chevron">▾</span></div>
+          <div class="swot-item-body"><div class="swot-body-inner"><div class="swot-body-row"><strong>Por quê:</strong> O maior risco de cancelamento não é falta de resultado — é expectativa errada no início. Cliente que esperava resultado em 30 dias cancela no mês 2, mesmo com o método correto.</div><div class="swot-body-row"><strong>Exemplo:</strong> Pediatra que assinou N1 achando que teria agenda cheia em 2 semanas vs. a realidade de 3–4 meses de consistência. O onboarding deve alinhar isso antes do contrato ser assinado.</div></div></div>
+        </div>
+
       </div>
     </div>
   </div>
 
-  <!-- EXPANSÃO 1 — Matriz Estratégica SWOT -->
-  <div class="glow-line" style="margin:40px 0 32px;"></div>
-  <div class="card" style="margin-top:8px;">
-    <h3 class="card-title">Matriz Estratégica — Combinações SWOT</h3>
-    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;line-height:1.6;">Cruzamentos que geram ação: cada combinação é uma decisão estratégica a tomar agora ou planejar.</p>
-    <div class="grid-2">
-
-      <!-- F×O -->
-      <div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-          <span class="badge badge-green">F×O</span>
-          <span style="font-size:13px;font-weight:600;color:var(--green);">Usar Força para capturar Oportunidade</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="padding:12px;background:rgba(81,207,102,0.05);border-radius:8px;border-left:3px solid var(--green);">
-            <div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:4px;">F1+O3</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Especialização exclusiva + janela de primeiro-entrante = posição monopolista no segmento</div>
-          </div>
-          <div style="padding:12px;background:rgba(81,207,102,0.05);border-radius:8px;border-left:3px solid var(--green);">
-            <div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:4px;">F2+O1</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Método proprietário + mercado crescendo 89,6% = método nomeado vira barreira de entrada</div>
-          </div>
-          <div style="padding:12px;background:rgba(81,207,102,0.05);border-radius:8px;border-left:3px solid var(--green);">
-            <div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:4px;">F3+O4</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Escada LTV R$124k + operação digital = expansão nacional sem custo fixo de estrutura</div>
-          </div>
-          <div style="padding:12px;background:rgba(81,207,102,0.05);border-radius:8px;border-left:3px solid var(--green);">
-            <div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:4px;">F4+O6</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Autoridade dual NIL+JAQUE + produto N0 diagnóstico = funil de entrada com credibilidade imediata</div>
-          </div>
-          <div style="padding:12px;background:rgba(81,207,102,0.05);border-radius:8px;border-left:3px solid var(--green);">
-            <div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:4px;">F5+O5</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Posicionamento de categoria + subnichos pediátricos = expansão vertical sem abandono de especialidade</div>
-          </div>
-          <div style="padding:12px;background:rgba(81,207,102,0.05);border-radius:8px;border-left:3px solid var(--green);">
-            <div style="font-size:11px;color:var(--green);font-family:var(--mono);margin-bottom:4px;">F6+O7</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Modelo produtizado + comunidade de clientes = asset de retenção que gera indicações automáticas</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- F×A -->
-      <div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-          <span class="badge badge-teal">F×A</span>
-          <span style="font-size:13px;font-weight:600;color:var(--teal);">Usar Força para neutralizar Ameaça</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="padding:12px;background:rgba(78,205,196,0.05);border-radius:8px;border-left:3px solid var(--teal);">
-            <div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:4px;">F3+A2</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Método nomeado + ameaça de imitadores = documentar e comunicar IP publicamente antes que copiem</div>
-          </div>
-          <div style="padding:12px;background:rgba(78,205,196,0.05);border-radius:8px;border-left:3px solid var(--teal);">
-            <div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:4px;">F1+A1</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Especialização pediátrica + regulação CFM = compliance se torna vantagem — sabemos mais que o genérico</div>
-          </div>
-          <div style="padding:12px;background:rgba(78,205,196,0.05);border-radius:8px;border-left:3px solid var(--teal);">
-            <div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:4px;">F6+A4</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Produtização 80/20 + volatilidade de algoritmo = repositório de ativos permite pivotar canal sem retrabalho</div>
-          </div>
-          <div style="padding:12px;background:rgba(78,205,196,0.05);border-radius:8px;border-left:3px solid var(--teal);">
-            <div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:4px;">F2+A5</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Método estruturado + risco de churn = onboarding com SLA escrito elimina desalinhamento de expectativa</div>
-          </div>
-          <div style="padding:12px;background:rgba(78,205,196,0.05);border-radius:8px;border-left:3px solid var(--teal);">
-            <div style="font-size:11px;color:var(--teal);font-family:var(--mono);margin-bottom:4px;">F4+A3</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Autoridade de fundadores + recessão = conteúdo orgânico gratuito mantém pipeline sem custo de mídia</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fr×O -->
-      <div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-          <span class="badge badge-yellow">Fr×O</span>
-          <span style="font-size:13px;font-weight:600;color:var(--yellow);">Superar Fraqueza para capturar Oportunidade</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="padding:12px;background:rgba(245,230,66,0.05);border-radius:8px;border-left:3px solid var(--yellow);">
-            <div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:4px;">Fr2+O1</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Sem cases ainda + mercado crescente = primeiro cliente vira case âncora nacional com urgência máxima</div>
-          </div>
-          <div style="padding:12px;background:rgba(245,230,66,0.05);border-radius:8px;border-left:3px solid var(--yellow);">
-            <div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:4px;">Fr3+O4</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Concentração em Mococa + expansão digital possível = transição para operação remote-first nos meses 4–6</div>
-          </div>
-          <div style="padding:12px;background:rgba(245,230,66,0.05);border-radius:8px;border-left:3px solid var(--yellow);">
-            <div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:4px;">Fr1+O6</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Dependência fundadores + N0 diagnóstico = produto de diagnóstico como treino para processo escalável</div>
-          </div>
-          <div style="padding:12px;background:rgba(245,230,66,0.05);border-radius:8px;border-left:3px solid var(--yellow);">
-            <div style="font-size:11px;color:var(--yellow);font-family:var(--mono);margin-bottom:4px;">Fr4+O2</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Banco de ativos em construção + digitalização da saúde = criar biblioteca com demanda crescente comprovada</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Fr×A -->
-      <div>
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-          <span class="badge badge-red">Fr×A</span>
-          <span style="font-size:13px;font-weight:600;color:var(--red);">Zona de Perigo — Fraqueza exposta a Ameaça</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div style="padding:12px;background:rgba(255,107,107,0.07);border-radius:8px;border-left:3px solid var(--red);">
-            <div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:4px;">Fr1+A3 ⚠ CRÍTICO</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Dependência fundadores + recessão = se um fundador cai, operação para. Plano de contingência obrigatório.</div>
-          </div>
-          <div style="padding:12px;background:rgba(255,107,107,0.07);border-radius:8px;border-left:3px solid var(--red);">
-            <div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:4px;">Fr2+A2 ⚠ ALTO</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Sem cases + imitadores chegando = janela estreita — case âncora deve ser captado nos primeiros 60 dias</div>
-          </div>
-          <div style="padding:12px;background:rgba(255,107,107,0.07);border-radius:8px;border-left:3px solid var(--red);">
-            <div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:4px;">Fr5+A3</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Risco de ancoragem de preço + recessão = nunca revelar oferta de batina como piso; posicionar pelo valor</div>
-          </div>
-          <div style="padding:12px;background:rgba(255,107,107,0.07);border-radius:8px;border-left:3px solid var(--red);">
-            <div style="font-size:11px;color:var(--red);font-family:var(--mono);margin-bottom:4px;">Fr6+A5</div>
-            <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Centralização operacional + churn por desalinhamento = onboarding documentado é seguro de vida da operação</div>
-          </div>
-        </div>
-      </div>
-
+  <div class="card" style="margin-top:24px;">
+  <h3 class="card-title">Prioridade Estratégica</h3>
+  <div class="grid-2">
+    <div style="padding:14px;background:var(--teal-glow);border-radius:8px;border:1px solid rgba(78,205,196,0.25);">
+      <div style="font-size:11px;color:var(--teal);font-family:var(--mono);font-weight:600;margin-bottom:6px;">ATACAR — F3 + O3</div>
+      <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Método nomeado + janela de primeiro-entrante = consolidar posição monopolista antes que apareça concorrência especializada.</div>
+    </div>
+    <div style="padding:14px;background:rgba(245,230,66,0.05);border-radius:8px;border:1px solid rgba(245,230,66,0.2);">
+      <div style="font-size:11px;color:var(--yellow);font-family:var(--mono);font-weight:600;margin-bottom:6px;">DEFENDER — Fr2 + A2</div>
+      <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Ausência de cases + ameaça de imitadores = documentar resultados desde o cliente 1. Case âncora é barreira de entrada.</div>
+    </div>
+    <div style="padding:14px;background:var(--surface-elevated);border-radius:8px;border:1px solid var(--border);">
+      <div style="font-size:11px;color:var(--text-secondary);font-family:var(--mono);font-weight:600;margin-bottom:6px;">CONSTRUIR — Fr1 + O4</div>
+      <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Dependência dos fundadores + expansão digital = contratar social media sênior no cliente 3. Libera os fundadores para comercial.</div>
+    </div>
+    <div style="padding:14px;background:rgba(255,107,107,0.05);border-radius:8px;border:1px solid rgba(255,107,107,0.15);">
+      <div style="font-size:11px;color:var(--red);font-family:var(--mono);font-weight:600;margin-bottom:6px;">EVITAR — Fr6 + A1</div>
+      <div style="font-size:13px;color:var(--text-primary);line-height:1.5;">Operação centralizada + regulação CFM = documentar compliance em todos os criativos desde o início. Não é opcional.</div>
     </div>
   </div>
+</div>
   <div class="section-source">Fonte: <em>swot.md</em></div>
 </section>
 
@@ -1629,6 +1684,50 @@ mark.search-hl {
       </div>
     </div>
   </div>
+  <div class="glow-line"></div>
+  <div class="card" style="margin-bottom:0;">
+  <h3 class="card-title" style="margin-bottom:4px;">Plano de Ação — 30 / 60 / 90 Dias</h3>
+  <p style="font-size:12px;color:var(--text-secondary);margin-bottom:20px;font-family:var(--mono);">Baseado nos OKRs de junho/2026 e nas decisões críticas do documento de fundação.</p>
+  <div class="grid-3">
+    <div style="background:var(--surface-elevated);border-radius:10px;padding:20px;border:1px solid var(--border);border-top:3px solid var(--teal);">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Dias 1–30 · Fundação</div>
+      <div style="font-size:18px;font-weight:800;color:var(--text-primary);margin-bottom:16px;">Contratos &amp; Ativos</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:8px;"><span style="color:var(--teal);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">2 contratos N1 assinados</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--teal);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">50 criativos no banco de ativos</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--teal);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">8 reuniões comerciais realizadas</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--teal);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">SOPs onboarding + ciclo mensal documentados</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--teal);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">@pixelrain.agency ativo — 9 posts publicados</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--teal);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Stack tecnológico configurado</span></li>
+      </ul>
+      <div style="margin-top:16px;padding:10px 12px;background:rgba(78,205,196,0.06);border-radius:6px;border:1px solid rgba(78,205,196,0.15);"><span style="font-family:var(--mono);font-size:11px;color:var(--teal);">Meta: R$5k MRR</span></div>
+    </div>
+    <div style="background:var(--surface-elevated);border-radius:10px;padding:20px;border:1px solid var(--border);border-top:3px solid #9A9A9A;">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--text-secondary);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Dias 31–60 · Tração</div>
+      <div style="font-size:18px;font-weight:800;color:var(--text-primary);margin-bottom:16px;">Resultados &amp; Processo</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-secondary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">4 contratos ativos</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-secondary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Primeiro cliente com resultado mensurável (+20% consultas particulares)</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-secondary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Social media sênior identificado para contratação</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-secondary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Taxa de fechamento comercial documentada</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-secondary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Primeiro case embrionário em andamento</span></li>
+      </ul>
+      <div style="margin-top:16px;padding:10px 12px;background:var(--surface);border-radius:6px;border:1px solid var(--border);"><span style="font-family:var(--mono);font-size:11px;color:var(--text-secondary);">Meta: R$10k MRR</span></div>
+    </div>
+    <div style="background:var(--surface-elevated);border-radius:10px;padding:20px;border:1px solid var(--border);border-top:3px solid #555;">
+      <div style="font-family:var(--mono);font-size:10px;color:var(--text-tertiary);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:8px;">Dias 61–90 · Consolidação</div>
+      <div style="font-size:18px;font-weight:800;color:var(--text-primary);margin-bottom:16px;">Escala &amp; Independência</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-tertiary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">6+ contratos ativos</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-tertiary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">1 operação rodando sem dependência diária dos fundadores</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-tertiary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">1 case completo documentado (antes/depois)</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-tertiary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Social media sênior em processo seletivo</span></li>
+        <li style="display:flex;gap:8px;"><span style="color:var(--text-tertiary);font-size:12px;margin-top:1px;flex-shrink:0;">▸</span><span style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Pipeline ativo com 20+ leads qualificados</span></li>
+      </ul>
+      <div style="margin-top:16px;padding:10px 12px;background:var(--surface);border-radius:6px;border:1px solid var(--border);"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">Meta: R$15k MRR</span></div>
+    </div>
+  </div>
+</div>
   <div class="section-source">Fonte: <em>okrs.md</em></div>
 </section>
 
@@ -1878,110 +1977,20 @@ mark.search-hl {
       </table>
     </div>
   </div>
-  <!-- EXPANSÃO 4 — Táticas por Canal Fase Inicial -->
-  <div class="glow-line" style="margin:32px 0;"></div>
-  <div class="card" style="margin-bottom:24px;">
-    <h3 class="card-title">Táticas por Canal — Fase Inicial (0–6 meses)</h3>
-    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:24px;line-height:1.5;">Playbook operacional para cada canal prioritário. Frequência, critério de qualificação e script de abertura.</p>
-    <div class="grid-2">
-
-      <div style="padding:20px;background:var(--surface-elevated);border-radius:10px;border:1px solid var(--border);border-top:3px solid var(--teal);">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-          <span class="badge badge-red" style="font-size:10px;">MÁXIMA PRIORIDADE</span>
-          <span style="font-size:15px;font-weight:700;color:var(--text-primary);">Canal 1: Rede Local Mococa</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">TÁTICA</span>
-            <span style="font-size:13px;color:var(--text-primary);line-height:1.5;">Mapeamento de pediatras locais → DM direto → reunião diagnóstica → proposta</span>
-          </div>
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">FREQUÊNCIA</span>
-            <span style="font-size:13px;color:var(--text-primary);">10 contatos/semana</span>
-          </div>
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">META</span>
-            <span style="font-size:13px;color:var(--text-primary);">3 reuniões diagnósticas por semana</span>
-          </div>
-        </div>
-        <div style="padding:12px;background:var(--surface);border-radius:6px;border-left:3px solid var(--teal);">
-          <div style="font-size:10px;color:var(--teal);font-family:var(--mono);margin-bottom:6px;">SCRIPT DE ABERTURA</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;font-style:italic;">"Oi Dr. [Nome], sou [NIL/JAQUE] da Pixel Rain Agency. Somos especialistas exclusivos em marketing pediátrico. Vi seu consultório e tenho uma análise que pode te interessar. Posso mandar?"</div>
-        </div>
-      </div>
-
-      <div style="padding:20px;background:var(--surface-elevated);border-radius:10px;border:1px solid var(--border);border-top:3px solid var(--teal);">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-          <span class="badge badge-red" style="font-size:10px;">MÁXIMA PRIORIDADE</span>
-          <span style="font-size:15px;font-weight:700;color:var(--text-primary);">Canal 2: Outbound Digital</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">TÁTICA</span>
-            <span style="font-size:13px;color:var(--text-primary);line-height:1.5;">LinkedIn + Instagram → identificar pediatras com agenda incompleta → DM personalizado com análise do perfil</span>
-          </div>
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">FREQUÊNCIA</span>
-            <span style="font-size:13px;color:var(--text-primary);">20 contatos/semana</span>
-          </div>
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">CRITÉRIO IQ</span>
-            <span style="font-size:13px;color:var(--text-primary);">Últimos posts com baixo engajamento + sem anúncios visíveis</span>
-          </div>
-        </div>
-        <div style="padding:12px;background:var(--surface);border-radius:6px;border-left:3px solid var(--yellow);">
-          <div style="font-size:10px;color:var(--yellow);font-family:var(--mono);margin-bottom:4px;">INDICADOR DE QUALIFICAÇÃO</div>
-          <div style="font-size:12px;color:var(--text-secondary);line-height:1.6;">Conta ativa há + de 6 meses, menos de 500 curtidas por post, sem CTA de agendamento visível.</div>
-        </div>
-      </div>
-
-      <div style="padding:20px;background:var(--surface-elevated);border-radius:10px;border:1px solid var(--border);border-top:3px solid var(--green);">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-          <span class="badge badge-gray" style="font-size:10px;">CONSTRUÇÃO ATIVA</span>
-          <span style="font-size:15px;font-weight:700;color:var(--text-primary);">Canal 3: Rede de Indicação (Médicos)</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">TÁTICA</span>
-            <span style="font-size:13px;color:var(--text-primary);line-height:1.5;">Ginecologistas, clínicos gerais, neonatologistas → parceria de indicação bilateral</span>
-          </div>
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">MECÂNICA</span>
-            <span style="font-size:13px;color:var(--text-primary);">Cada indicação que virar cliente = R$300 de bônus aplicado no serviço deles</span>
-          </div>
-          <div style="display:flex;gap:10px;">
-            <span style="font-size:11px;color:var(--teal);font-family:var(--mono);flex-shrink:0;width:80px;">LÓGICA</span>
-            <span style="font-size:13px;color:var(--text-primary);">Médico indica pediatra, pediatra vira cliente. Reciprocidade profissional.</span>
-          </div>
-        </div>
-        <div style="padding:10px;background:var(--surface);border-radius:6px;border-left:3px solid var(--green);">
-          <div style="font-size:12px;color:var(--text-secondary);">Escala máxima na fase 18m+ quando base de clientes cria redes de indicação espontânea.</div>
-        </div>
-      </div>
-
-      <div style="padding:20px;background:var(--surface-elevated);border-radius:10px;border:1px solid var(--border);border-top:3px solid var(--teal);">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-          <span class="badge badge-teal" style="font-size:10px;">PERMANENTE</span>
-          <span style="font-size:15px;font-weight:700;color:var(--text-primary);">Canal 4: Autoridade de Fundadores</span>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
-          <div style="padding:10px;background:var(--surface);border-radius:6px;border-left:3px solid var(--text-tertiary);">
-            <div style="font-size:11px;color:var(--text-secondary);font-weight:600;margin-bottom:4px;">NIL — Instagram · 3x/semana</div>
-            <div style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Posta sobre erros de marketing pediátrico. Tom: direto, provocador, sem jargão. Perspectiva de pai.</div>
-          </div>
-          <div style="padding:10px;background:var(--surface);border-radius:6px;border-left:3px solid var(--teal);">
-            <div style="font-size:11px;color:var(--teal);font-weight:600;margin-bottom:4px;">JAQUE — Instagram · 2x/semana</div>
-            <div style="font-size:12px;color:var(--text-secondary);line-height:1.5;">Posta sobre estratégia de crescimento de consultório. Tom: analítico, firme, perspectiva de mãe.</div>
-          </div>
-        </div>
-        <div style="padding:12px;background:var(--surface);border-radius:6px;border-left:3px solid var(--yellow);">
-          <div style="font-size:10px;color:var(--yellow);font-family:var(--mono);margin-bottom:4px;">CTA PADRÃO (todo post)</div>
-          <div style="font-size:12px;color:var(--text-secondary);font-style:italic;line-height:1.5;">"Se quiser entender como isso se aplica ao seu consultório, tenho 15 minutos disponíveis para um diagnóstico gratuito no WhatsApp."</div>
-        </div>
-      </div>
-
-    </div>
+  <div class="card" style="margin-top:24px;">
+  <h3 class="card-title">Prioridade de Captação — Fase Inicial (0–6 meses)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Canal</th><th>Por que agora</th><th>Como começar</th><th>Meta/mês</th></tr></thead>
+      <tbody>
+        <tr><td style="font-weight:600;color:var(--text-primary);">Rede local Mococa</td><td style="color:var(--text-secondary);">Acesso direto, zero custo, confiança prévia</td><td style="color:var(--text-secondary);">Mapear pediatras locais → DM direto → reunião diagnóstica</td><td style="color:var(--teal);font-family:var(--mono);">3 reuniões</td></tr>
+        <tr><td style="font-weight:600;color:var(--text-primary);">Outbound digital</td><td style="color:var(--text-secondary);">Escala sem custo, qualificação pelo perfil</td><td style="color:var(--text-secondary);">LinkedIn + Instagram → pediatras com baixo engajamento + sem anúncios visíveis</td><td style="color:var(--teal);font-family:var(--mono);">20 contatos</td></tr>
+        <tr><td style="font-weight:600;color:var(--text-primary);">Autoridade dos fundadores</td><td style="color:var(--text-secondary);">Inbound qualificado, menor CAC, maior confiança</td><td style="color:var(--text-secondary);">NIL: 3x/sem sobre erros de mkt pediátrico. JAQUE: 2x/sem sobre estratégia de consultório</td><td style="color:var(--teal);font-family:var(--mono);">9 posts</td></tr>
+        <tr><td style="font-weight:600;color:var(--text-primary);">Indicação de médicos</td><td style="color:var(--text-secondary);">Conversão alta, chegam com confiança prévia</td><td style="color:var(--text-secondary);">Parceria com ginecologistas e clínicos: indicação bilateral com bônus</td><td style="color:var(--teal);font-family:var(--mono);">2 parcerias</td></tr>
+      </tbody>
+    </table>
   </div>
+</div>
 
   <div class="card">
     <h3 class="card-title">Sequência de Outbound — 12 dias</h3>
@@ -2281,72 +2290,6 @@ mark.search-hl {
     </div>
   </div>
 
-  <div class="grid-3">
-    <!-- NIL -->
-    <div class="card" style="border-top:4px solid #F4F2EE;">
-      <div style="font-family:var(--mono);font-size:10px;color:var(--text-tertiary);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">Fundador · Criativo</div>
-      <div style="font-size:24px;font-weight:800;color:var(--text-primary);margin-bottom:4px;">NIL</div>
-      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;">Onildo Figueiredo</div>
-      <div class="divider"></div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Arquétipo</div><div style="font-size:13px;color:var(--text-primary);">Criador com traço de Mago</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Imersão</div><div style="font-size:13px;color:var(--text-primary);">Tripla: filho de 15a + filho de 1a + filha a nascer</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Tom</div><div style="font-size:13px;color:var(--text-primary);">Direto, humano, autoridade de observação vivida</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Função</div><div style="font-size:13px;color:var(--teal);">Abre espaço mental, desloca percepção, provoca</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Promessa</div><div style="font-size:13px;color:var(--text-primary);font-style:italic;">"Isso muda tudo."</div></div>
-      </div>
-      <div class="divider"></div>
-      <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:6px;font-family:var(--mono);">PROIBIDO</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        <span class="badge badge-red" style="font-size:10px;">jargão</span>
-        <span class="badge badge-red" style="font-size:10px;">autoelogio</span>
-        <span class="badge badge-red" style="font-size:10px;">urgência fabricada</span>
-        <span class="badge badge-red" style="font-size:10px;">linguagem coach</span>
-      </div>
-    </div>
-    <!-- JAQUE -->
-    <div class="card" style="border-top:4px solid var(--teal);">
-      <div style="font-family:var(--mono);font-size:10px;color:var(--text-tertiary);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">Fundadora · Estrategista</div>
-      <div style="font-size:24px;font-weight:800;color:var(--text-primary);margin-bottom:4px;">JAQUE</div>
-      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;">Jaque Souza</div>
-      <div class="divider"></div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Arquétipo</div><div style="font-size:13px;color:var(--text-primary);">A Estrategista que vive o que analisa</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Imersão</div><div style="font-size:13px;color:var(--text-primary);">Dupla: mãe de adolescente + mãe de bebê</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Tom</div><div style="font-size:13px;color:var(--text-primary);">Analítico, firme, observacional. Fecha com afirmação</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Função</div><div style="font-size:13px;color:var(--teal);">Diagnostica o gargalo real, nomeia o invisível</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Promessa</div><div style="font-size:13px;color:var(--text-primary);font-style:italic;">"Isso organiza tudo."</div></div>
-      </div>
-      <div class="divider"></div>
-      <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:6px;font-family:var(--mono);">PROIBIDO</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        <span class="badge badge-red" style="font-size:10px;">linguagem motivacional</span>
-        <span class="badge badge-red" style="font-size:10px;">"solução"</span>
-        <span class="badge badge-red" style="font-size:10px;">urgência fabricada</span>
-      </div>
-    </div>
-    <!-- AGENCY -->
-    <div class="card" style="border-top:4px solid var(--teal);background:var(--teal-glow);border-color:rgba(78,205,196,0.3);">
-      <div style="font-family:var(--mono);font-size:10px;color:var(--teal);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:12px;">Marca · Operacional</div>
-      <div style="font-size:24px;font-weight:800;color:var(--teal);margin-bottom:4px;">AGENCY</div>
-      <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;">Pixel Rain Agency</div>
-      <div class="divider"></div>
-      <div style="display:flex;flex-direction:column;gap:10px;">
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Arquétipo</div><div style="font-size:13px;color:var(--text-primary);">Especialista Operador</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Tom</div><div style="font-size:13px;color:var(--text-primary);">Profissional (não corporativo), preciso (não frio)</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Autoridade via</div><div style="font-size:13px;color:var(--text-primary);">Especialização exclusiva + método nomeado + resultados</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Função</div><div style="font-size:13px;color:var(--teal);">Entrega o método, fecha o ciclo, executa</div></div>
-        <div><div style="font-size:11px;color:var(--text-tertiary);margin-bottom:2px;">Promessa</div><div style="font-size:13px;color:var(--text-primary);font-style:italic;">"Isso entrega tudo."</div></div>
-      </div>
-      <div class="divider"></div>
-      <div style="font-size:11px;color:var(--text-tertiary);margin-bottom:6px;font-family:var(--mono);">PROIBIDO</div>
-      <div style="display:flex;flex-wrap:wrap;gap:6px;">
-        <span class="badge badge-red" style="font-size:10px;">métricas de vaidade</span>
-        <span class="badge badge-red" style="font-size:10px;">hype</span>
-        <span class="badge badge-red" style="font-size:10px;">urgência fabricada</span>
-      </div>
-    </div>
-  </div>
 
   <!-- Contatos e identidade -->
   <div class="glow-line" style="margin:32px 0;"></div>
@@ -2370,6 +2313,7 @@ mark.search-hl {
       </div>
     </div>
   </div>
+  <div class="section-source">Fonte: <em>marca-verbal-onildo-figueiredo.md</em> · <em>marca-verbal-jaque-souza.md</em></div>
 </section>
 
 <!-- ══════════════════════════════
@@ -2565,6 +2509,7 @@ mark.search-hl {
       </div>
     </div>
   </div>
+  <div class="section-source">Fonte: <em>proposta-de-valor.md</em></div>
 </section>
 
 </main>
@@ -2685,6 +2630,15 @@ function walkText(node, cb) {
   if (node.nodeType === 3) { cb(node); return; }
   if (['SCRIPT','STYLE','SVG'].includes(node.nodeName)) return;
   Array.from(node.childNodes).forEach(c => walkText(c, cb));
+}
+
+// ─── SWOT ACCORDION ───
+function toggleSwot(el) {
+  const wasOpen = el.classList.contains('open');
+  // close all open items in the same quadrant column
+  const col = el.closest('div[style*="flex-direction:column"], div[style*="flex-direction: column"]');
+  if (col) col.querySelectorAll('.swot-item.open').forEach(item => item.classList.remove('open'));
+  if (!wasOpen) el.classList.add('open');
 }
 
 
