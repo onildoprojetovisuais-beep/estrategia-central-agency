@@ -443,6 +443,40 @@ tr:hover td { background: var(--surface-hover); }
 .swot-body-row { font-size: 12px; line-height: 1.55; color: var(--text-secondary); }
 .swot-body-row strong { color: var(--text-primary); font-weight: 600; }
 
+/* ─── OKR TRACKER ─── */
+.kr-input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: var(--mono);
+  font-size: 12px;
+  padding: 3px 7px;
+  width: 54px;
+  text-align: right;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  -moz-appearance: textfield;
+}
+.kr-input::-webkit-inner-spin-button,
+.kr-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+.kr-input:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 2px rgba(78,205,196,0.15); }
+.kr-input.kr-done { border-color: var(--green); color: var(--green); }
+.kr-pct { text-align:right; margin-top:3px; font-family:var(--mono); font-size:10px; color:var(--text-tertiary); }
+.okr-score-badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(78,205,196,0.08);
+  color: var(--teal);
+  margin-left: auto;
+  border: 1px solid rgba(78,205,196,0.2);
+  transition: background 0.3s, color 0.3s;
+  flex-shrink: 0;
+}
+.okr-score-badge.done { background:rgba(81,207,102,0.12); color:var(--green); border-color:rgba(81,207,102,0.25); }
+#okrGlobalBar { height:100%; width:0%; background:var(--teal); border-radius:3px; transition:width 0.4s ease,background 0.3s; }
+
 /* ─── SEARCH HIGHLIGHT ─── */
 mark.search-hl {
   background: rgba(245,230,66,0.25);
@@ -1551,59 +1585,185 @@ mark.search-hl {
     <p class="section-sub">7 objetivos críticos para o primeiro mês de operação. P0 = crítico, P1 = alto.</p>
   </div>
   <div class="exec-decision"><span class="exec-tag">P0</span><span class="exec-text">5 itens inegociáveis em junho: 2 contratos, 50 criativos, 8 reuniões, SOPs documentados, Instagram ativo.</span></div>
+  <!-- ── Score Global ── -->
+  <div style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--surface-elevated);border-radius:10px;border:1px solid var(--border);margin-bottom:4px;">
+    <div style="font-family:var(--mono);font-size:10px;color:var(--text-secondary);letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;">Score Global</div>
+    <div style="flex:1;height:6px;background:var(--surface);border-radius:3px;overflow:hidden;"><div id="okrGlobalBar"></div></div>
+    <div id="okrGlobalPct" style="font-family:var(--mono);font-size:14px;font-weight:800;color:var(--teal);min-width:44px;text-align:right;">0%</div>
+    <button onclick="resetOKRs()" title="Limpar todos os valores" style="background:none;border:1px solid var(--border);color:var(--text-tertiary);font-family:var(--mono);font-size:10px;padding:3px 9px;border-radius:4px;cursor:pointer;flex-shrink:0;transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='var(--red)';this.style.color='var(--red)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-tertiary)'">↺ reset</button>
+  </div>
+
   <div style="display:flex;flex-direction:column;gap:16px;">
+    <!-- OKR 1 -->
     <div class="card" style="border-left:4px solid var(--yellow);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-yellow">P0 CRÍTICO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 1</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Receita inicial — Contratos N1</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-yellow">P0 CRÍTICO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 1</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Receita inicial — Contratos N1</span>
+        <span class="okr-score-badge" data-okr-score="kr1">0%</span>
+      </div>
       <div class="grid-3">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Contratos N1 assinados</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 2</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">MRR</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: R$5k</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Leads no pipeline</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 12</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Contratos N1 assinados</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr1-kr1" data-meta="2" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 2</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr1-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr1-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">MRR (R$)</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr1-kr2" data-meta="5000" placeholder="0" min="0" style="width:68px;" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 5k</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr1-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr1-kr2">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Leads no pipeline</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr1-kr3" data-meta="12" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 12</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr1-kr3" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr1-kr3">0%</div>
+        </div>
       </div>
     </div>
+    <!-- OKR 2 -->
     <div class="card" style="border-left:4px solid var(--yellow);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-yellow">P0 CRÍTICO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 2</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Presença digital — @pixelrain.agency</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-yellow">P0 CRÍTICO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 2</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Presença digital — @pixelrain.agency</span>
+        <span class="okr-score-badge" data-okr-score="kr2">0%</span>
+      </div>
       <div class="grid-3">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Perfil ativo configurado</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 100%</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Posts publicados</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 9</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Reuniões comerciais</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 8</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Perfil configurado</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr2-kr1" data-meta="100" placeholder="0" min="0" max="100" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 100%</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr2-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr2-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Posts publicados</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr2-kr2" data-meta="9" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 9</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr2-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr2-kr2">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Reuniões comerciais</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr2-kr3" data-meta="8" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 8</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr2-kr3" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr2-kr3">0%</div>
+        </div>
       </div>
     </div>
+    <!-- OKR 3 -->
     <div class="card" style="border-left:4px solid var(--teal);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-teal">P1 ALTO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 3</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Autoridade dos fundadores — Conteúdo</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-teal">P1 ALTO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 3</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Autoridade dos fundadores — Conteúdo</span>
+        <span class="okr-score-badge" data-okr-score="kr3">0%</span>
+      </div>
       <div class="grid-2">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Publicações totais</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 12</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Menções dos fundadores</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 8</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Publicações totais</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr3-kr1" data-meta="12" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 12</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr3-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr3-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Menções dos fundadores</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr3-kr2" data-meta="8" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 8</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr3-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr3-kr2">0%</div>
+        </div>
       </div>
     </div>
+    <!-- OKR 4 -->
     <div class="card" style="border-left:4px solid var(--teal);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-teal">P1 ALTO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 4</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Pipeline de captação ativo</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-teal">P1 ALTO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 4</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Pipeline de captação ativo</span>
+        <span class="okr-score-badge" data-okr-score="kr4">0%</span>
+      </div>
       <div class="grid-2">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Canais de captação ativos</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 3</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Leads qualificados</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 15</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Canais de captação ativos</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr4-kr1" data-meta="3" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 3</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr4-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr4-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Leads qualificados</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr4-kr2" data-meta="15" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 15</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr4-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr4-kr2">0%</div>
+        </div>
       </div>
     </div>
+    <!-- OKR 5 -->
     <div class="card" style="border-left:4px solid var(--yellow);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-yellow">P0 CRÍTICO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 5</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Banco de ativos criativo</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-yellow">P0 CRÍTICO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 5</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Banco de ativos criativo</span>
+        <span class="okr-score-badge" data-okr-score="kr5">0%</span>
+      </div>
       <div class="grid-3">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Criativos produzidos</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 50</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Roteiros de reels</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 30</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Calendário editorial</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 100%</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Criativos produzidos</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr5-kr1" data-meta="50" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 50</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr5-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr5-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Roteiros de reels</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr5-kr2" data-meta="30" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 30</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr5-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr5-kr2">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Calendário editorial</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr5-kr3" data-meta="100" placeholder="0" min="0" max="100" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 100%</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr5-kr3" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr5-kr3">0%</div>
+        </div>
       </div>
     </div>
+    <!-- OKR 6 -->
     <div class="card" style="border-left:4px solid var(--yellow);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-yellow">P0 CRÍTICO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 6</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Operação interna — SOPs e stack</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-yellow">P0 CRÍTICO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 6</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Operação interna — SOPs e stack</span>
+        <span class="okr-score-badge" data-okr-score="kr6">0%</span>
+      </div>
       <div class="grid-3">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Checklist onboarding</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 100%</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">SOP ciclo mensal</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 100%</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Stack tecnológico</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 100%</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Checklist onboarding</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr6-kr1" data-meta="100" placeholder="0" min="0" max="100" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 100%</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr6-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr6-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">SOP ciclo mensal</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr6-kr2" data-meta="100" placeholder="0" min="0" max="100" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 100%</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr6-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr6-kr2">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Stack tecnológico</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr6-kr3" data-meta="100" placeholder="0" min="0" max="100" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 100%</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr6-kr3" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr6-kr3">0%</div>
+        </div>
       </div>
     </div>
+    <!-- OKR 7 -->
     <div class="card" style="border-left:4px solid var(--yellow);">
-      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span class="badge badge-yellow">P0 CRÍTICO</span><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 7</span><span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Processo comercial validado</span></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+        <span class="badge badge-yellow">P0 CRÍTICO</span>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">OKR 7</span>
+        <span style="font-size:16px;font-weight:700;color:var(--text-primary);margin-left:4px;">Processo comercial validado</span>
+        <span class="okr-score-badge" data-okr-score="kr7">0%</span>
+      </div>
       <div class="grid-3">
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Reuniões comerciais</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 8</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Propostas enviadas</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 5</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
-        <div><div class="progress-header" style="display:flex;justify-content:space-between;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Discurso validado</span><span style="font-family:var(--mono);font-size:12px;color:var(--teal);">meta: 100%</span></div><div class="progress-track"><div class="progress-fill" style="width:0%;"></div></div></div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Reuniões comerciais</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr7-kr1" data-meta="8" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 8</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr7-kr1" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr7-kr1">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Propostas enviadas</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr7-kr2" data-meta="5" placeholder="0" min="0" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 5</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr7-kr2" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr7-kr2">0%</div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><span style="font-size:13px;color:var(--text-primary);">Discurso validado</span><div style="display:flex;align-items:center;gap:5px;"><input type="number" class="kr-input" data-kr="kr7-kr3" data-meta="100" placeholder="0" min="0" max="100" oninput="updateKR(this)"><span style="font-family:var(--mono);font-size:11px;color:var(--text-tertiary);">/ 100%</span></div></div>
+          <div class="progress-track"><div class="progress-fill" data-kr="kr7-kr3" style="width:0%;transition:width 0.4s ease,background 0.3s;"></div></div>
+          <div class="kr-pct" data-pct="kr7-kr3">0%</div>
+        </div>
       </div>
     </div>
   </div>
@@ -2631,6 +2791,111 @@ function walkText(node, cb) {
   if (['SCRIPT','STYLE','SVG'].includes(node.nodeName)) return;
   Array.from(node.childNodes).forEach(c => walkText(c, cb));
 }
+
+// ─── OKR TRACKER ───
+function updateKR(input) {
+  const id    = input.dataset.kr;
+  const meta  = parseFloat(input.dataset.meta);
+  const val   = Math.max(0, parseFloat(input.value) || 0);
+  const ratio = Math.min(1, val / meta);
+  const pct   = Math.round(ratio * 100);
+
+  // cor dinâmica por progresso
+  const color = pct >= 100 ? 'var(--green)'
+              : pct >= 60  ? 'var(--teal)'
+              : pct >= 30  ? 'var(--yellow)'
+              : 'var(--red)';
+
+  // barra do KR
+  const bar = document.querySelector(`.progress-fill[data-kr="${id}"]`);
+  if (bar) { bar.style.width = pct + '%'; bar.style.background = color; }
+
+  // label de porcentagem
+  const lbl = document.querySelector(`[data-pct="${id}"]`);
+  if (lbl) { lbl.textContent = pct + '%'; lbl.style.color = pct > 0 ? color : ''; }
+
+  // destaque no input quando concluído
+  input.classList.toggle('kr-done', pct >= 100);
+
+  // score do OKR pai
+  const okrId = id.split('-')[0];
+  updateOKRScore(okrId);
+  updateGlobalProgress();
+  saveOKRs();
+}
+
+function updateOKRScore(okrId) {
+  const inputs = document.querySelectorAll(`.kr-input[data-kr^="${okrId}-"]`);
+  if (!inputs.length) return;
+  let sum = 0;
+  inputs.forEach(inp => {
+    const meta = parseFloat(inp.dataset.meta);
+    const val  = Math.max(0, parseFloat(inp.value) || 0);
+    sum += Math.min(1, val / meta);
+  });
+  const score = Math.round((sum / inputs.length) * 100);
+  const badge = document.querySelector(`[data-okr-score="${okrId}"]`);
+  if (badge) {
+    badge.textContent = score + '%';
+    badge.classList.toggle('done', score >= 100);
+  }
+}
+
+function updateGlobalProgress() {
+  const inputs = document.querySelectorAll('.kr-input');
+  if (!inputs.length) return;
+  let sum = 0;
+  inputs.forEach(inp => {
+    const meta = parseFloat(inp.dataset.meta);
+    const val  = Math.max(0, parseFloat(inp.value) || 0);
+    sum += Math.min(1, val / meta);
+  });
+  const global = (sum / inputs.length) * 100;
+  const bar = document.getElementById('okrGlobalBar');
+  if (bar) {
+    bar.style.width = global.toFixed(1) + '%';
+    bar.style.background = global >= 100 ? 'var(--green)'
+                         : global >= 60  ? 'var(--teal)'
+                         : global >= 30  ? 'var(--yellow)'
+                         : 'var(--red)';
+  }
+  const lbl = document.getElementById('okrGlobalPct');
+  if (lbl) lbl.textContent = global.toFixed(1) + '%';
+}
+
+function saveOKRs() {
+  const data = {};
+  document.querySelectorAll('.kr-input').forEach(inp => {
+    if (inp.value !== '') data[inp.dataset.kr] = inp.value;
+  });
+  try { localStorage.setItem('pr_okrs_jun2026', JSON.stringify(data)); } catch(e) {}
+}
+
+function loadOKRs() {
+  try {
+    const data = JSON.parse(localStorage.getItem('pr_okrs_jun2026') || '{}');
+    Object.entries(data).forEach(([id, val]) => {
+      const inp = document.querySelector(`.kr-input[data-kr="${id}"]`);
+      if (inp) { inp.value = val; updateKR(inp); }
+    });
+  } catch(e) {}
+}
+
+function resetOKRs() {
+  if (!confirm('Limpar todos os valores dos OKRs?')) return;
+  document.querySelectorAll('.kr-input').forEach(inp => { inp.value = ''; inp.classList.remove('kr-done'); });
+  document.querySelectorAll('.progress-fill[data-kr]').forEach(b => { b.style.width = '0%'; b.style.background = ''; });
+  document.querySelectorAll('[data-pct]').forEach(l => { l.textContent = '0%'; l.style.color = ''; });
+  document.querySelectorAll('[data-okr-score]').forEach(b => { b.textContent = '0%'; b.classList.remove('done'); });
+  const gbar = document.getElementById('okrGlobalBar');
+  if (gbar) { gbar.style.width = '0%'; gbar.style.background = ''; }
+  const glbl = document.getElementById('okrGlobalPct');
+  if (glbl) glbl.textContent = '0%';
+  try { localStorage.removeItem('pr_okrs_jun2026'); } catch(e) {}
+}
+
+// Inicializa ao carregar
+document.addEventListener('DOMContentLoaded', loadOKRs);
 
 // ─── SWOT ACCORDION ───
 function toggleSwot(el) {
