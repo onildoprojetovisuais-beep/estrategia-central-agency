@@ -18,7 +18,7 @@ Este é um documento de uso externo. Tudo o que está aqui pode ser dito a um pe
 
 Ele é o par do documento de Fundação Estratégica. A Fundação descreve como a Agency funciona por dentro — método, escada, LTV, modelo de negócio. Esta Narrativa descreve o que o pediatra ouve. São dois documentos porque são duas conversas. Quem mistura as duas ativa medo e desconfiança em um cliente que, bem abordado, fecharia sem hesitar.
 
-> \[!NOTE\] A regra de ouro deste documento O resultado precisa parecer rápido. A profundidade pode ser longa. O pediatra tem uma dor urgente — agenda vazia, caixa apertado — e uma pergunta única: em quanto tempo isso melhora? Toda página deste documento responde a essa pergunta antes de qualquer outra. Nada aqui fala de jornada longa, de contrato, de duração total. Não porque seja segredo — mas porque não é o que faz o cliente comprar.
+> [!NOTE] A regra de ouro deste documento O resultado precisa parecer rápido. A profundidade pode ser longa. O pediatra tem uma dor urgente — agenda vazia, caixa apertado — e uma pergunta única: em quanto tempo isso melhora? Toda página deste documento responde a essa pergunta antes de qualquer outra. Nada aqui fala de jornada longa, de contrato, de duração total. Não porque seja segredo — mas porque não é o que faz o cliente comprar.
 
 Palavras que não aparecem em nenhuma página deste documento, por decisão: jornada de 22 meses, LTV, recorrência como característica de produto, contrato como abertura de conversa. Elas existem na Fundação Estratégica, onde são ferramenta de fundador. Aqui, não.
 
@@ -60,7 +60,7 @@ Só depois que o cliente quer o resultado, apresenta-se o método — e o métod
 
 Só no fim, quando o cliente já pensou "eu quero isso", entram os termos: como funciona a operação contínua, como é o acompanhamento, como é o início. O compromisso é apresentado como o que torna o resultado possível — operação de marca pede consistência. Falar disso antes dos passos 1 a 3 é pedir compromisso de quem ainda não viu valor.
 
-> \[!NOTE\] Por que a ordem é inegociável Dor sem resultado é só desconforto. Resultado sem método não é crível. Método sem o cliente querer o resultado é informação que pesa. Compromisso antes do desejo é sensação de prisão. Os quatro passos só funcionam nesta ordem — porque cada um prepara o terreno do próximo.
+> [!NOTE] Por que a ordem é inegociável Dor sem resultado é só desconforto. Resultado sem método não é crível. Método sem o cliente querer o resultado é informação que pesa. Compromisso antes do desejo é sensação de prisão. Os quatro passos só funcionam nesta ordem — porque cada um prepara o terreno do próximo.
 
 ### O que o pediatra quer ouvir — e o que não quer
 
@@ -81,7 +81,7 @@ Este é o roteiro de uma reunião comercial completa da Agency, do início ao pr
 
 ### Abertura — situar sem vender (2 minutos)
 
-> *Dr. \[nome\], obrigado pelo tempo. Antes de qualquer coisa, queria entender o seu consultório hoje. Como está a sua agenda? Como você sente o equilíbrio entre particular e convênio? Me conta um pouco do momento.*
+> *Dr. [nome], obrigado pelo tempo. Antes de qualquer coisa, queria entender o seu consultório hoje. Como está a sua agenda? Como você sente o equilíbrio entre particular e convênio? Me conta um pouco do momento.*
 
 A abertura não apresenta a Agency. Ela abre espaço para o pediatra falar. Quem fala primeiro é o cliente.
 
@@ -133,7 +133,7 @@ Compromisso apresentado como condição do resultado — não como amarra. E a c
 
 > *Faz sentido pra você? Se fizer, eu te envio a proposta ainda esta semana e marcamos uma conversa rápida pra eu tirar dúvidas. Pode ser?*
 
-> \[!NOTE\] O erro que destrói a reunião Começar pelo método ou pelo preço. Pediatra que ouve "a gente tem uma escada de três níveis e contrato anual" antes de sentir a dor reconhecida e o resultado próximo, recua. Não porque a oferta seja ruim — mas porque foi apresentada na ordem que ativa medo, não desejo. A ordem dor, resultado, método, compromisso não é sugestão. É o que faz a reunião fechar.
+> [!NOTE] O erro que destrói a reunião Começar pelo método ou pelo preço. Pediatra que ouve "a gente tem uma escada de três níveis e contrato anual" antes de sentir a dor reconhecida e o resultado próximo, recua. Não porque a oferta seja ruim — mas porque foi apresentada na ordem que ativa medo, não desejo. A ordem dor, resultado, método, compromisso não é sugestão. É o que faz a reunião fechar.
 
 # 03 · Como falar de cada nível do método
 
@@ -155,7 +155,7 @@ Como apresentar este nível em reunião:
 
 - **O resultado que ele quer ouvir:** "Em poucos meses, a agenda vira. Mais particular, menos dependência de convênio."
 
-- **O que NÃO dizer:** "O N1 custa R\$ 2.500 e dura quatro meses até o upgrade." Isso é linguagem interna.
+- **O que NÃO dizer:** "O N1 custa R$ 2.500 e dura quatro meses até o upgrade." Isso é linguagem interna.
 
 ### O segundo nível — para o cliente, é parar de perder paciente
 
@@ -171,7 +171,7 @@ Como apresentar este nível:
 
 - **O resultado que ele quer ouvir:** "Cada paciente que demonstra interesse passa a ser acompanhado até virar consulta."
 
-- **O que NÃO dizer:** "O N2 sobe o ticket para R\$ 5.000 e tem KPI de taxa de conversão." Linguagem interna.
+- **O que NÃO dizer:** "O N2 sobe o ticket para R$ 5.000 e tem KPI de taxa de conversão." Linguagem interna.
 
 O terceiro nível — para o cliente, é transformar paciente em recorrência
 
@@ -189,7 +189,7 @@ Como apresentar este nível:
 
 - **O que NÃO dizer:** "O N3 maximiza o LTV por paciente." Linguagem interna pura.
 
-> \[!NOTE\] A escada inteira em uma frase de cliente Primeiro a sua agenda enche. Depois você para de perder paciente no caminho. Depois as famílias passam a voltar e indicar. Cada fase resolve a dor do momento — e o método evolui junto com o seu consultório. Nenhuma menção a nível, ticket, mês ou contrato. Só transformação, na ordem em que o pediatra a vive.
+> [!NOTE] A escada inteira em uma frase de cliente Primeiro a sua agenda enche. Depois você para de perder paciente no caminho. Depois as famílias passam a voltar e indicar. Cada fase resolve a dor do momento — e o método evolui junto com o seu consultório. Nenhuma menção a nível, ticket, mês ou contrato. Só transformação, na ordem em que o pediatra a vive.
 
 # 04 · Copy para site e Instagram
 
@@ -255,7 +255,7 @@ Textos prontos para a página da Agency e para os perfis sociais. Todos seguem a
 
 ### Post 5 — prova social
 
-> *\[Nome\], pediatra em \[cidade\]. Antes: agenda diurna com horário vazio, maioria convênio. Depois de alguns meses de operação: agenda particular crescendo, sexta-feira virou um dos dias mais cheios. Resultado de método, não de sorte.*
+> *[Nome], pediatra em [cidade]. Antes: agenda diurna com horário vazio, maioria convênio. Depois de alguns meses de operação: agenda particular crescendo, sexta-feira virou um dos dias mais cheios. Resultado de método, não de sorte.*
 
 ### Stories de apresentação
 
@@ -297,11 +297,21 @@ O número assusta menos quando chega depois do valor. Se o pediatra já entendeu
 
 Texto modelo para a seção de investimento:
 
-> *O investimento na primeira fase do trabalho é de R\$ \[valor\] por mês, com uma verba de mídia à parte que vai direto para as plataformas de anúncio. É uma operação contínua, mês a mês — porque encher agenda e manter agenda cheia é trabalho de consistência, não de ação isolada. Conforme o seu consultório evolui e novas necessidades aparecem, a gente conversa sobre os próximos passos. Mas isso é decisão pra frente, quando fizer sentido pra você.*
+> *O investimento na primeira fase do trabalho é de R$ [valor] por mês, com uma verba de mídia à parte que vai direto para as plataformas de anúncio. É uma operação contínua, mês a mês — porque encher agenda e manter agenda cheia é trabalho de consistência, não de ação isolada. Conforme o seu consultório evolui e novas necessidades aparecem, a gente conversa sobre os próximos passos. Mas isso é decisão pra frente, quando fizer sentido pra você.*
 
 Note: a proposta menciona "operação contínua" e "próximos passos", mas não cita duração total, não cita os outros níveis com preço, não cita contrato de período. O pediatra está comprando a primeira fase. Os próximos passos são conversa futura — apresentados como escolha dele, não como pacote amarrado.
 
-> \[!NOTE\] Sobre o contrato O contrato de período existe e é necessário — operação de marca precisa de tempo para entregar. Mas o contrato é assunto da assinatura, não da proposta de venda. Quando o pediatra disser "quero seguir", aí se conversa sobre o período de compromisso, explicado como o tempo mínimo para o resultado acontecer — não como amarra. Apresentar o contrato como condição do resultado, e não como trava comercial, é o que faz o cliente assinar sem receio.
+> [!NOTE] Sobre o contrato O contrato de período existe e é necessário — operação de marca precisa de tempo para entregar. Mas o contrato é assunto da assinatura, não da proposta de venda. Quando o pediatra disser "quero seguir", aí se conversa sobre o período de compromisso, explicado como o tempo mínimo para o resultado acontecer — não como amarra. Apresentar o contrato como condição do resultado, e não como trava comercial, é o que faz o cliente assinar sem receio.
+
+### Como apresentar o serviço de social media
+
+Gestão de Instagram, conteúdo orgânico e linha editorial não fazem parte do pacote da operação — são um serviço adicional, a partir de R$ 1.200/mês. Na proposta, esse serviço aparece como um item opcional, claramente separado do valor da operação, nunca embutido.
+
+A forma de apresentar importa. O serviço de social media não é o que falta — é um complemento que o pediatra soma se quiser presença orgânica além da captação. Se o pediatra perguntar sobre conteúdo, a resposta é simples e sem defensiva:
+
+> *A gestão do seu Instagram com conteúdo orgânico é um serviço que a gente também oferece, separado, a partir de R$ 1.200 por mês. Ele soma à operação, mas não substitui — porque quem enche a sua agenda é a captação, não o post orgânico. Muitos pediatras começam só com a operação e adicionam o conteúdo depois, quando a agenda já está virando. Você decide o ritmo.*
+
+A lógica: o pediatra precisa entender que pode contratar a operação sem o social media, e que isso não enfraquece o resultado de agenda. O social media é escolha, não requisito.
 
 # 06 · Respostas para as objeções mais comuns
 
@@ -321,9 +331,9 @@ As objeções abaixo são as mais frequentes na venda para pediatra. Para cada u
 
 > *Isso é mais comum do que você imagina — e quase sempre acontece pela mesma razão: quem você contratou fazia post solto, sem método e sem entender pediatria. Marketing pediátrico não é fazer post bonito. É sistema de captação especializado. A gente atende só pediatra, e isso muda tudo no resultado. O que você viveu antes não foi marketing pediátrico de verdade.*
 
-### "Posso fazer só uma parte? Só o Instagram?"
+### "Eu só queria alguém pra cuidar do meu Instagram."
 
-> *Posso ser direto? Só o Instagram não enche a sua agenda. O que enche é o sistema completo: presença digital, captação, atendimento preparado. Fazer só um pedaço é gastar dinheiro num resultado que não vem. Por isso a gente trabalha a operação inteira da primeira fase — é o que faz a agenda virar de verdade.*
+> *Entendo — e isso a gente faz, é um serviço à parte que começa em R$ 1.200. Mas deixa eu ser honesto com você: cuidar do Instagram, sozinho, não enche a sua agenda. Post bonito não traz paciente novo de forma previsível. O que enche a agenda é a operação de captação — presença na busca, funis, tráfego, atendimento preparado. O Instagram orgânico é um complemento bom, e você pode contratar junto, mas o que resolve a sua dor de agenda vazia é a operação. Faz sentido a gente começar pelo que resolve o problema, e você decide depois se quer somar o conteúdo orgânico?*
 
 ### "Quanto tempo até eu ver resultado?"
 
@@ -337,7 +347,7 @@ As objeções abaixo são as mais frequentes na venda para pediatra. Para cada u
 
 > *Por isso o nosso trabalho tem acompanhamento próximo, com reunião mensal pra você ver os números na sua frente. Você não vai esperar meses no escuro pra descobrir se funciona. Todo mês você enxerga o que está acontecendo com a sua agenda. O resultado é acompanhado de perto, não prometido e esquecido.*
 
-> \[!NOTE\] O princípio que rege toda objeção Nunca defenda o preço. Nunca defenda o modelo. Sempre recoloque a conversa na dor que trouxe o pediatra até aqui — a agenda vazia, o convênio que aperta, o paciente que some — e no resultado próximo que o trabalho entrega. Objeção é o cliente pedindo um motivo para confiar. O motivo é sempre o resultado dele, nunca a arquitetura da Agency.
+> [!NOTE] O princípio que rege toda objeção Nunca defenda o preço. Nunca defenda o modelo. Sempre recoloque a conversa na dor que trouxe o pediatra até aqui — a agenda vazia, o convênio que aperta, o paciente que some — e no resultado próximo que o trabalho entrega. Objeção é o cliente pedindo um motivo para confiar. O motivo é sempre o resultado dele, nunca a arquitetura da Agency.
 
 # Síntese
 
@@ -347,7 +357,7 @@ A correção não é esconder o modelo. É entender que existem duas conversas. 
 
 A regra final cabe em uma linha, e vale relê-la antes de cada reunião, cada proposta, cada post.
 
-> \[!NOTE\] A regra que orienta toda a comunicação da Agency O resultado precisa parecer rápido. A profundidade pode ser longa. O pediatra compra o alívio de uma dor urgente — e a primeira coisa que ele precisa ouvir é quando essa dor melhora. A profundidade do método, a escada, a continuidade: tudo isso é verdade, e tudo isso aparece — mas depois, como evolução desejável, nunca como duração que assusta.
+> [!NOTE] A regra que orienta toda a comunicação da Agency O resultado precisa parecer rápido. A profundidade pode ser longa. O pediatra compra o alívio de uma dor urgente — e a primeira coisa que ele precisa ouvir é quando essa dor melhora. A profundidade do método, a escada, a continuidade: tudo isso é verdade, e tudo isso aparece — mas depois, como evolução desejável, nunca como duração que assusta.
 
 **PIXEL RAIN AGENCY**
 

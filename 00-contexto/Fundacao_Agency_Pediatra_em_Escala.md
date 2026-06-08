@@ -22,7 +22,7 @@ Toda decisão registrada aqui deriva do Playbook Oficial da Pixel Rain. Onde o p
 
 A leitura é em ordem. Os capítulos finais (riscos, gargalos, decisões críticas) só fazem sentido depois que os anteriores estabelecem a fundação. Quem ler salteado vai perder a lógica de ascensão que sustenta o LTV — e é essa lógica que define se a Agency será mais uma agência ou uma operação realmente escalável.
 
-> \[!NOTE\] O que esta Agency vende A Pixel Rain Agency não vende posts, reels, design, tráfego ou social media. Vende crescimento operacional previsível para pediatras e clínicas pediátricas. Toda definição deste documento parte dessa frase. Quando uma decisão futura ameaçar essa frase, a decisão está errada — não a frase.
+> [!NOTE] O que esta Agency vende A Pixel Rain Agency não vende posts, reels, design, tráfego ou social media. Vende crescimento operacional previsível para pediatras e clínicas pediátricas. Toda definição deste documento parte dessa frase. Quando uma decisão futura ameaçar essa frase, a decisão está errada — não a frase.
 
 # Sumário
 
@@ -68,7 +68,7 @@ O que diferencia este método de qualquer outra agência atuando em saúde é a 
 
 ### Promessa principal
 
-> \[!NOTE\] A promessa que sustenta o método O Método Pediatra em Escala começa a gerar previsibilidade de agenda já nos primeiros meses de operação — e aprofunda os resultados conforme o consultório amadurece. Cada nível resolve uma dor imediata: primeiro a agenda vazia, depois a perda de lead, depois a baixa retenção. O resultado aparece cedo; a profundidade se constrói ao longo do tempo. Essa é a promessa do método.
+> [!NOTE] A promessa que sustenta o método O Método Pediatra em Escala começa a gerar previsibilidade de agenda já nos primeiros meses de operação — e aprofunda os resultados conforme o consultório amadurece. Cada nível resolve uma dor imediata: primeiro a agenda vazia, depois a perda de lead, depois a baixa retenção. O resultado aparece cedo; a profundidade se constrói ao longo do tempo. Essa é a promessa do método.
 
 ### Transformação prometida
 
@@ -118,11 +118,11 @@ Cliente Agency não fica pelo encantamento — fica pela dor de sair. Retenção
 
 A escada de valor é o coração comercial do método. Não é um catálogo de pacotes — é uma jornada progressiva de crescimento do consultório, onde cada nível resolve uma dor imediata e revela a próxima. O cliente que respeita a escada cresce de forma previsível. O cliente que tenta pular nível atrapalha o método e atrapalha o próprio resultado.
 
-> \[!NOTE\] A regra inegociável da escada Todo cliente entra pelo N1. Não há exceção. Pediatra que insiste em começar pelo N2 ou N3 está pedindo para o método não funcionar — porque sem a base do N1 instalada, não há o que converter ou reter. Recusar cliente que insiste em pular nível é parte da disciplina comercial da Agency.
+> [!NOTE] A regra inegociável da escada Todo cliente entra pelo N1. Não há exceção. Pediatra que insiste em começar pelo N2 ou N3 está pedindo para o método não funcionar — porque sem a base do N1 instalada, não há o que converter ou reter. Recusar cliente que insiste em pular nível é parte da disciplina comercial da Agency.
 
 ## N1 · ATRAÇÃO
 
-*Ticket: R\$ 2.500/mês · Verba de tráfego: R\$ 1.500–R\$ 2.500/mês (separada)*
+*Ticket: R$ 2.500/mês · Verba de tráfego: R$ 1.500–R$ 2.500/mês (separada)*
 
 ### Objetivo
 
@@ -152,11 +152,13 @@ Encher a agenda do consultório com pacientes particulares qualificados, em hor�
 
 - **Gestão e execução de tráfego pago.** Meta Ads e Google Ads gerenciados semanalmente. Segmentação por raio de bairro. Criativos modulares: foto do médico, headline editável, CTA padrão. Análise quinzenal e otimização.
 
-- **Conteúdo orgânico básico.** 12 a 16 posts/mês no feed (educativo, autoridade, bastidor). Rotina diária de stories com template. 4 a 8 reels/mês baseados em roteiros do banco da Agency.
+- **Acompanhamento e relatório de performance da captação.** Painel de acompanhamento dos canais de captação que a Agency opera — tráfego pago, funis, Google Business — com leads gerados por canal, custo por lead e custo por agendamento. Relatório mensal consolidado, em template padronizado, apresentado em reunião de leitura. Definição e registro da baseline de entrada no onboarding, para servir de comparação. Recomendações de ajuste a cada ciclo.
+
+> [!NOTE] O que o N1 não inclui — social media e linha editorial Gestão de redes sociais, produção de conteúdo orgânico de feed, stories e reels, e linha editorial não fazem parte do N1 nem de nenhum nível da escada. São um serviço à parte, contratável separadamente a partir de R$ 1.200/mês. O N1 opera captação — tráfego, funis, presença em busca local. Conteúdo orgânico é outra disciplina, com outra lógica de produção, e por isso é cobrado à parte. Essa separação precisa estar clara em proposta e reunião: o pediatra que quer presença orgânica contrata o serviço adicional; não é uma falha do pacote, é um serviço distinto.
 
 ### KPI principal
 
-> \[!NOTE\] Indicador único do N1 Número de consultas particulares novas agendadas por mês, em comparação com o mês de entrada. Resultado esperado ao final do quarto mês: aumento de no mínimo 40% sobre a baseline de entrada. Tudo o mais — alcance, seguidores, engajamento — é métrica de processo. Só consulta agendada é métrica de resultado.
+> [!NOTE] Indicador único do N1 Número de consultas particulares novas agendadas por mês, em comparação com o mês de entrada. Resultado esperado ao final do quarto mês: aumento de no mínimo 40% sobre a baseline de entrada. Tudo o mais — alcance, seguidores, engajamento — é métrica de processo. Só consulta agendada é métrica de resultado.
 
 ### Transformação prometida
 
@@ -180,15 +182,15 @@ O pediatra começa a perceber que está deixando dinheiro na mesa. A agenda est�
 
 ### Stack operacional
 
-Meta Ads, Google Ads, Google Business, Instagram, painel omnichannel (Chatguru, Octadesk ou similar), Canva ou Figma para templates, banco de criativos pediátricos da Agency, banco de roteiros de reels, calendário editorial anual pediátrico.
+Meta Ads, Google Ads, Google Business, painel omnichannel (Chatguru, Octadesk ou similar), banco de criativos pediátricos da Agency para tráfego e funis, três funis padrão com landing pages, template de relatório de performance da captação, calendário de campanhas pago.
 
 ### Resultado esperado
 
-Ao final do N1 bem-operado, o pediatra tem: agenda em fluxo previsível, presença digital estruturada e funcionando, três funis ativos gerando lead, secretária respondendo dentro do SLA, e indicadores básicos de captação acompanhados mês a mês.
+Ao final do N1 bem-operado, o pediatra tem: agenda em fluxo previsível, presença digital estruturada e funcionando, três funis ativos gerando lead, secretária respondendo dentro do SLA, e um relatório mensal de performance da captação que mostra, com número, o que cada canal está entregando.
 
 ## N2 · CONVERSÃO
 
-*Ticket: R\$ 3.750/mês (entrada) → R\$ 5.000/mês (ideal)*
+*Ticket: R$ 3.750/mês (entrada) → R$ 5.000/mês (ideal)*
 
 ### Objetivo
 
@@ -218,11 +220,11 @@ Aproveitar 100% do volume de lead que o N1 está gerando. Parar de perder pacien
 
 - **Treinamento da equipe do consultório.** Duas a três calls de treinamento da secretária. Gravação como template para os próximos clientes da Agency.
 
-- **Análise mensal de indicadores aprofundada.** Taxa de conversão lead → agendamento → consulta, ticket médio, frequência de retorno, NPS. Reunião mensal de leitura de número entra no rito do cliente.
+- **Análise mensal de indicadores aprofundada.** O N1 já entrega o relatório de performance da captação — leads, custo por lead, custo por agendamento. O N2 expande essa leitura para a operação comercial interna: taxa de conversão lead → agendamento → consulta, ticket médio, frequência de retorno, NPS. Enquanto o relatório do N1 mede o que a Agency capta, a análise do N2 mede o que a equipe do consultório faz com o que foi captado. A reunião mensal de leitura passa a cobrir as duas camadas.
 
 ### KPI principal
 
-> \[!NOTE\] Indicador único do N2 Taxa de conversão de lead em consulta agendada efetivamente realizada. Baseline esperada de entrada: 35–45%. Resultado esperado em três a quatro meses de N2: 60–70%. Esse é o número que define se o N2 está funcionando — todos os outros indicadores apoiam, mas este decide.
+> [!NOTE] Indicador único do N2 Taxa de conversão de lead em consulta agendada efetivamente realizada. Baseline esperada de entrada: 35–45%. Resultado esperado em três a quatro meses de N2: 60–70%. Esse é o número que define se o N2 está funcionando — todos os outros indicadores apoiam, mas este decide.
 
 ### Transformação prometida
 
@@ -254,7 +256,7 @@ Ao final do N2 bem-operado, o pediatra tem: taxa de conversão acima de 60%, tic
 
 ## N3 · RETENÇÃO
 
-*Ticket: R\$ 5.000/mês (entrada) → R\$ 7.000/mês (ideal)*
+*Ticket: R$ 5.000/mês (entrada) → R$ 7.000/mês (ideal)*
 
 ### Objetivo
 
@@ -290,7 +292,7 @@ Fidelizar a família do paciente, gerar recompra natural na transição puericul
 
 ### KPI principal
 
-> \[!NOTE\] Indicador único do N3 LTV médio por paciente atendido — calculado pelo valor total faturado por paciente ao longo do tempo de vida dele no consultório. Resultado esperado em 6 a 12 meses de N3: aumento de no mínimo 30% sobre o LTV de entrada. Esse é o indicador-rei do nível — porque mede exatamente o que o N3 entrega.
+> [!NOTE] Indicador único do N3 LTV médio por paciente atendido — calculado pelo valor total faturado por paciente ao longo do tempo de vida dele no consultório. Resultado esperado em 6 a 12 meses de N3: aumento de no mínimo 30% sobre o LTV de entrada. Esse é o indicador-rei do nível — porque mede exatamente o que o N3 entrega.
 
 ### Transformação prometida
 
@@ -326,12 +328,12 @@ A escada não é um catálogo — é uma jornada progressiva. A tabela abaixo é
 
 | **Mês**   | **Nível**    | **Ticket** | **Acumulado**   | **KPI principal**   |
 |:----------|:-------------|:-----------|:----------------|:--------------------|
-| 1–4       | N1 Atração   | R\$ 2.500  | R\$ 10.000      | Agenda particular   |
-| 5–10      | N2 Conversão | R\$ 5.000  | R\$ 40.000      | Taxa conversão      |
-| 11–22     | N3 Retenção  | R\$ 7.000  | R\$ 124.000     | LTV por paciente    |
-| **Total** | **22 meses** | **—**      | **R\$ 124.000** | **LTV por cliente** |
+| 1–4       | N1 Atração   | R$ 2.500  | R$ 10.000      | Agenda particular   |
+| 5–10      | N2 Conversão | R$ 5.000  | R$ 40.000      | Taxa conversão      |
+| 11–22     | N3 Retenção  | R$ 7.000  | R$ 124.000     | LTV por paciente    |
+| **Total** | **22 meses** | **—**      | **R$ 124.000** | **LTV por cliente** |
 
-> \[!NOTE\] O cálculo de receita que justifica a especialização Com 10 pediatras na carteira em diferentes estágios da escada, a Agency atinge entre R\$ 50.000 e R\$ 65.000 de mensalidade recorrente. Esse é o tamanho mínimo viável de operação produtizada. A partir daí, escala pelo método — não por contratação proporcional.
+> [!NOTE] O cálculo de receita que justifica a especialização Com 10 pediatras na carteira em diferentes estágios da escada, a Agency atinge entre R$ 50.000 e R$ 65.000 de mensalidade recorrente. Esse é o tamanho mínimo viável de operação produtizada. A partir daí, escala pelo método — não por contratação proporcional.
 
 # 03 · Posicionamento competitivo
 
@@ -341,7 +343,7 @@ A Pixel Rain Agency não compete em uma categoria existente. Ela ocupa uma categ
 
 ### Categoria que a Agency ocupa
 
-> \[!NOTE\] Categoria oficial Operação de marketing pediátrico especializada e produtizada. Não é agência de marketing médico (que atende qualquer especialidade). Não é social media para consultório (que executa peça). Não é consultoria de crescimento (que sugere e sai). É operação contínua, especializada e baseada em método — para pediatra e clínica pediátrica, exclusivamente.
+> [!NOTE] Categoria oficial Operação de marketing pediátrico especializada e produtizada. Não é agência de marketing médico (que atende qualquer especialidade). Não é social media para consultório (que executa peça). Não é consultoria de crescimento (que sugere e sai). É operação contínua, especializada e baseada em método — para pediatra e clínica pediátrica, exclusivamente.
 
 ### Como a Agency deve ser percebida
 
@@ -399,13 +401,13 @@ Este capítulo existe por causa de um erro de percepção real, identificado dur
 
 ### O erro que este capítulo corrige
 
-A Agency foi modelada por fundadores que pensam como arquitetos de negócio. Para um arquiteto de negócio, "jornada de 22 meses", "LTV de R\$ 124.000" e "contrato anual" são informações boas — descrevem um modelo sólido, previsível, com retenção alta. São motivo de orgulho estratégico.
+A Agency foi modelada por fundadores que pensam como arquitetos de negócio. Para um arquiteto de negócio, "jornada de 22 meses", "LTV de R$ 124.000" e "contrato anual" são informações boas — descrevem um modelo sólido, previsível, com retenção alta. São motivo de orgulho estratégico.
 
 Mas o pediatra não pensa como arquiteto de negócio. Pensa como alguém com um problema urgente. A agenda está vazia agora. O fluxo de caixa aperta agora. Quando esse pediatra ouve "jornada de 22 meses", ele não escuta "modelo sólido". Ele escuta: demora quase dois anos para funcionar. Quando ouve "contrato anual" antes de entender o resultado, não escuta "compromisso com o método". Escuta: vão me prender.
 
 O problema nunca foi o modelo. O modelo está certo. O problema é expor a modelagem interna a quem deveria receber a narrativa de cliente. São duas conversas diferentes — e misturá-las ativa resistência, medo e desconfiança em um cliente que, bem abordado, compraria sem hesitar.
 
-> \[!NOTE\] O princípio que rege toda a comunicação da Agency O resultado precisa parecer rápido. A profundidade pode ser longa. Internamente, a Agency pensa em LTV, jornada completa e arquitetura de recorrência. Externamente, o cliente pensa em uma só pergunta: em quanto tempo a minha agenda melhora? A comunicação da Agency responde a essa pergunta primeiro — sempre.
+> [!NOTE] O princípio que rege toda a comunicação da Agency O resultado precisa parecer rápido. A profundidade pode ser longa. Internamente, a Agency pensa em LTV, jornada completa e arquitetura de recorrência. Externamente, o cliente pensa em uma só pergunta: em quanto tempo a minha agenda melhora? A comunicação da Agency responde a essa pergunta primeiro — sempre.
 
 ### As duas conversas
 
@@ -415,7 +417,7 @@ Toda informação sobre o método pertence a uma de duas conversas. A conversa i
 |:---------------------------------------------------------------------|:--------------------------------------------------------------------------------|
 | *Fundadores, equipe, este documento, projeção financeira, playbook.* | *Reunião, proposta, site, anúncio, Instagram, pitch, e-mail comercial.*         |
 | Jornada estruturada de 22 meses.                                     | Um sistema progressivo que evolui com o consultório.                            |
-| LTV médio de R\$ 124.000 por cliente.                                | Cada nível resolve uma dor específica e entrega retorno próprio.                |
+| LTV médio de R$ 124.000 por cliente.                                | Cada nível resolve uma dor específica e entrega retorno próprio.                |
 | Contrato anual com aviso prévio de 60 dias.                          | Uma operação contínua — porque resultado de marca se constrói com consistência. |
 | Escada de valor com três níveis e ascensão de ticket.                | Um método em etapas, onde cada fase resolve a dor do momento.                   |
 | Renovação e permanência no N3 elevam o LTV efetivo.                  | Quando o consultório cresce, a operação cresce junto.                           |
@@ -448,7 +450,7 @@ A sequência da conversa de cliente é fixa, e a ordem é o que faz funcionar. I
 
 - **A expressão "jornada de 22 meses" ou qualquer duração total.** Substituir sempre por "sistema progressivo", "operação contínua de evolução", "método em etapas".
 
-- **O número de LTV.** R\$ 124.000 é cálculo de fundador. O cliente não quer saber quanto vale para a Agency — quer saber quanto a agenda dele melhora.
+- **O número de LTV.** R$ 124.000 é cálculo de fundador. O cliente não quer saber quanto vale para a Agency — quer saber quanto a agenda dele melhora.
 
 - **A palavra "recorrência" como característica do produto.** Recorrência é como a Agency fatura. Para o cliente, fala-se em "operação contínua" e no porquê: resultado de marca exige consistência.
 
@@ -456,7 +458,7 @@ A sequência da conversa de cliente é fixa, e a ordem é o que faz funcionar. I
 
 - **"Quem não está disposto a 22 meses não está pronto."** Esse tipo de frase, mesmo verdadeira internamente, soa como ultimato. Fora do documento de fundação, não existe.
 
-> \[!NOTE\] Como usar este capítulo na prática Antes de qualquer pessoa da Agency publicar um post, enviar uma proposta, montar um slide ou entrar em reunião, ela revisa a coluna da esquerda da tabela acima. Se qualquer termo da conversa interna apareceu no material de cliente, troca pela versão da direita. Esse hábito é o que impede o erro de percepção de voltar a acontecer.
+> [!NOTE] Como usar este capítulo na prática Antes de qualquer pessoa da Agency publicar um post, enviar uma proposta, montar um slide ou entrar em reunião, ela revisa a coluna da esquerda da tabela acima. Se qualquer termo da conversa interna apareceu no material de cliente, troca pela versão da direita. Esse hábito é o que impede o erro de percepção de voltar a acontecer.
 
 # 05 · Modelo comercial e arquitetura de LTV
 
@@ -476,20 +478,20 @@ O modelo comercial da Agency é desenhado para uma coisa: previsibilidade financ
 
 ### Arquitetura de LTV
 
-O LTV médio da Agency, considerando a jornada completa de 22 meses na escada, é de R\$ 124.000 por cliente. Esse número vem da projeção do playbook e não considera renovações além do N3. Na prática, clientes N3 maduros tendem a renovar — o que pode levar o LTV efetivo para R\$ 200.000+ ao longo de 3 a 4 anos de relacionamento.
+O LTV médio da Agency, considerando a jornada completa de 22 meses na escada, é de R$ 124.000 por cliente. Esse número vem da projeção do playbook e não considera renovações além do N3. Na prática, clientes N3 maduros tendem a renovar — o que pode levar o LTV efetivo para R$ 200.000+ ao longo de 3 a 4 anos de relacionamento.
 
 | **Fase**        | **Duração**  | **Ticket mensal** | **Receita da fase** |
 |:----------------|:-------------|:------------------|:--------------------|
-| N1 Atração      | 4 meses      | R\$ 2.500         | R\$ 10.000          |
-| \# N2 Conversão | 6 meses      | R\$ 5.000         | R\$ 30.000          |
-| \# N3 Retenção  | 12 meses     | R\$ 7.000         | R\$ 84.000          |
-| **Total LTV**   | **22 meses** | **—**             | **R\$ 124.000**     |
+| N1 Atração      | 4 meses      | R$ 2.500         | R$ 10.000          |
+| N2 Conversão   | 6 meses      | R$ 5.000         | R$ 30.000          |
+| N3 Retenção    | 12 meses     | R$ 7.000         | R$ 84.000          |
+| **Total LTV**   | **22 meses** | **—**             | **R$ 124.000**     |
 
 ### Como aumentar ticket ao longo da jornada
 
 - **Upgrade entre níveis.** Mecanismo principal. Cada upgrade representa um aumento de ticket entre 50% e 100% — e é acionado por gatilho operacional, não por argumento comercial.
 
-- **Ascensão dentro do mesmo nível.** N2 começa em R\$ 3.750 e pode chegar a R\$ 5.000 conforme o escopo se aprofunda. N3 começa em R\$ 5.000 e pode chegar a R\$ 7.000. Isso permite ajuste de ticket sem precisar de gatilho de upgrade formal.
+- **Ascensão dentro do mesmo nível.** N2 começa em R$ 3.750 e pode chegar a R$ 5.000 conforme o escopo se aprofunda. N3 começa em R$ 5.000 e pode chegar a R$ 7.000. Isso permite ajuste de ticket sem precisar de gatilho de upgrade formal.
 
 - **Adições pontuais.** Cliente N3 maduro pode contratar projetos pontuais sobre o contrato base — campanha de abertura de filial, projeto sazonal especial, lançamento de novo médico na clínica. Adições têm preço próprio e prazo próprio.
 
@@ -519,7 +521,7 @@ Tudo que se repete entre clientes pediátricos é produtizável — e produtizad
 
 - **Framework de funis pediátricos.** Três funis padrão (avaliação gratuita, e-book primeira consulta, migração convênio) com landing page template, copy testada, criativo modular.
 
-- **Framework de copy.** Estrutura padrão de hook, desenvolvimento, CTA — adaptada para feed, reels, stories, anúncio. Cada tipo tem template próprio.
+- **Framework de copy.** Estrutura padrão de hook, desenvolvimento, CTA — adaptada para anúncio de tráfego, landing page e funil. Cada tipo tem template próprio. O framework de copy para conteúdo orgânico de feed e reels existe à parte, vinculado ao serviço avulso de social media.
 
 - **Framework de campanhas sazonais.** Volta às aulas, vacinação, inverno respiratório, semana do prematuro, dia da pediatria. Cada campanha com objetivo, criativo, copy e fluxo prontos. Personaliza só o rosto do médico.
 
@@ -531,9 +533,9 @@ Tudo que se repete entre clientes pediátricos é produtizável — e produtizad
 
 ### Bancos de ativos reaproveitáveis
 
-- **Banco de criativos pediátricos.** 50 a 100 templates editáveis no Canva ou Figma, organizados por categoria (educativo, autoridade, depoimento, bastidor, sazonal, vacinação, alerta de saúde). Cada template em várias variações de cor e foto.
+- **Banco de criativos pediátricos para tráfego e funil.** 50 a 100 templates editáveis no Canva ou Figma, voltados para anúncios de mídia paga e landing pages, organizados por categoria (autoridade, prova social, oferta, sazonal). Cada template em várias variações de cor e foto.
 
-- **Banco de roteiros de reels.** 50 roteiros prontos por categoria. Hook, desenvolvimento, CTA, legenda padrão. Adaptados ao rosto e voz do cliente na execução.
+- **Banco de roteiros de reels.** 50 roteiros prontos por categoria, com hook, desenvolvimento, CTA e legenda padrão. Este banco serve ao serviço avulso de social media — não aos níveis da escada — mas é mantido como ativo produtizado da Agency, pela mesma lógica de reaproveitamento.
 
 - **Banco de hooks pediátricos.** Lista validada de aberturas que funcionam com mãe de criança. Atualizada conforme a operação testa e valida.
 
@@ -579,9 +581,19 @@ A margem da Agency aumenta exponencialmente à medida que mais clientes operam d
 
 Produtização é o que permite que um social media bem treinado opere três clientes simultâneos sem cair de padrão. Sem produtização, mesmo o melhor social media opera no máximo um cliente bem feito. A diferença não é talento — é infraestrutura.
 
+### O serviço avulso — social media e linha editorial
+
+Gestão de redes sociais, produção de conteúdo orgânico de feed, stories e reels, e linha editorial não compõem nenhum nível da escada. São um serviço adicional, contratável à parte, a partir de R$ 1.200/mês.
+
+A razão é estratégica, não comercial. A escada da Agency entrega captação e crescimento operacional — tráfego, funis, conversão, retenção. Conteúdo orgânico é outra disciplina: tem outra lógica de produção, outro ritmo, outro tipo de talento, e um resultado mais difícil de amarrar a indicador de agenda. Misturar conteúdo orgânico dentro do N1 inflaria o escopo, diluiria o foco em captação e tornaria o pacote mais difícil de entregar com padrão.
+
+Mantê-lo como serviço avulso tem três vantagens. Preserva o N1 enxuto e focado em captação. Cria uma linha de receita adicional sobre a mesma carteira. E respeita o pediatra que já tem alguém cuidando do conteúdo orgânico — ele contrata só o que precisa. O serviço avulso usa os ativos produtizados próprios da Agency (banco de roteiros de reels, framework de copy orgânica) e pode ser vendido junto com qualquer nível da escada, ou isolado.
+
+> [!NOTE] Como comunicar o serviço avulso O serviço avulso nunca é apresentado como o que falta no pacote. É apresentado como uma disciplina distinta, que a Agency executa bem, e que o pediatra contrata se quiser presença orgânica além da captação. Em proposta e reunião: o pacote da escada entrega crescimento operacional; o social media é um complemento opcional, a partir de R$ 1.200/mês.
+
 ### A disciplina inegociável
 
-> \[!NOTE\] A regra dos 80/20 da produtização Toda vez que algo é feito do zero pela primeira vez, o tempo de execução já considera transformá-lo em template para o próximo. Não é processo posterior — é parte do processo original. Sem isso, a Agency vira artesanato remunerado por hora, e o método dela é só promessa.
+> [!NOTE] A regra dos 80/20 da produtização Toda vez que algo é feito do zero pela primeira vez, o tempo de execução já considera transformá-lo em template para o próximo. Não é processo posterior — é parte do processo original. Sem isso, a Agency vira artesanato remunerado por hora, e o método dela é só promessa.
 
 # 07 · Visão de escala
 
@@ -643,7 +655,7 @@ Pediatra é a entrada. Mas dentro do universo pediátrico há subnichos com dor 
 
 ### Oportunidade 3 — Produtos de entrada de menor ticket
 
-O N1 a R\$ 2.500 é a porta atual. Há espaço para criar um produto N0 — diagnóstico aprofundado pago, setup avulso, mini-curso para o pediatra que ainda não está pronto para operação contínua. Esse produto não compete com o N1 — alimenta ele. O pediatra que consome o N0 vira lead qualificado para o N1.
+O N1 a R$ 2.500 é a porta atual. Há espaço para criar um produto N0 — diagnóstico aprofundado pago, setup avulso, mini-curso para o pediatra que ainda não está pronto para operação contínua. Esse produto não compete com o N1 — alimenta ele. O pediatra que consome o N0 vira lead qualificado para o N1.
 
 ### Oportunidade 4 — Comunidade de clientes como ativo
 
@@ -671,7 +683,7 @@ Este capítulo final lista as decisões que precisam ser tomadas — ou confirma
 
 ### Decisão 1 — Quem é o cliente número 1 a 6
 
-O playbook prevê 6 clientes nos primeiros 90 dias, com oferta de batina (R\$ 33.000 em 15 meses, ao invés do ticket cheio). A decisão crítica é: quem são essas 6 pessoas, nominalmente? Sem nome e telefone, o roadmap não sai do papel.
+O playbook prevê 6 clientes nos primeiros 90 dias, com oferta de batina (R$ 33.000 em 15 meses, ao invés do ticket cheio). A decisão crítica é: quem são essas 6 pessoas, nominalmente? Sem nome e telefone, o roadmap não sai do papel.
 
 Sugestão: na primeira semana, listar 20 pediatras nominais — da rede de Mococa, da rede médica conhecida, dos contatos de Nil e Jaque. Desses 20, 6 viram cliente. O resto vira pipeline.
 
@@ -739,7 +751,7 @@ A disciplina central, repetida em cada capítulo deste documento, é a mesma: es
 
 Os próximos 90 dias decidem se a Pixel Rain Agency vai existir como operação séria ou como agência genérica disfarçada de especializada. Não é uma escolha de mercado — é uma escolha de disciplina interna.
 
-> \[!NOTE\] A frase que orienta toda decisão futura — leitura interna A Pixel Rain Agency vende crescimento operacional previsível para pediatras e clínicas pediátricas, em escada de valor progressiva, com método produtizado, especialização absoluta, e LTV médio de R\$ 124.000 por cliente ao longo da jornada completa. Esta é a leitura de fundador. Os números — LTV, duração total, projeção — são modelagem de negócio e nunca aparecem como narrativa comercial. Para o cliente, a mesma frase se traduz assim: a Agency entrega previsibilidade de agenda já nos primeiros meses, e aprofunda o crescimento do consultório a cada nível. Qualquer decisão que comprometa qualquer parte da leitura interna compromete o modelo — e qualquer material que exponha a leitura interna ao cliente compromete a venda.
+> [!NOTE] A frase que orienta toda decisão futura — leitura interna A Pixel Rain Agency vende crescimento operacional previsível para pediatras e clínicas pediátricas, em escada de valor progressiva, com método produtizado, especialização absoluta, e LTV médio de R$ 124.000 por cliente ao longo da jornada completa. Esta é a leitura de fundador. Os números — LTV, duração total, projeção — são modelagem de negócio e nunca aparecem como narrativa comercial. Para o cliente, a mesma frase se traduz assim: a Agency entrega previsibilidade de agenda já nos primeiros meses, e aprofunda o crescimento do consultório a cada nível. Qualquer decisão que comprometa qualquer parte da leitura interna compromete o modelo — e qualquer material que exponha a leitura interna ao cliente compromete a venda.
 
 **PIXEL RAIN AGENCY**
 
